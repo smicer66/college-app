@@ -1,0 +1,104 @@
+﻿Imports CompassCC.CCCSystem.CCCCommon
+Imports CompassCC.ProSolution.PSWebEnrolmentKit
+
+
+Partial Class webcontrols_checkout_applications2
+    Inherits CheckoutBaseControl
+
+    Protected Overrides Sub OnLoad(e As EventArgs)
+        MyBase.OnLoad(e)
+
+        'WorkingData.EnrolmentRequestRow.EuroResidentID = True
+
+    End Sub
+
+    Public Overrides Sub ValidateControl()
+        MyBase.ValidateControl()
+        'English
+        'If drpEnglish.SelectedValue = "" Then
+        '    Dim v As New CustomValidator()
+        '    v.ErrorMessage = "Please select an option for English Language"
+        '    v.IsValid = False
+
+        '    Me.Page.Validators.Add(v)
+        '    Me.ValidationSummary1.ShowSummary = True
+        'Else
+        '    If drpEnglish.SelectedValue = "Yes" Then
+        '        WorkingData.EnrolmentRequestRow.StudentFirstLanguageID = 1
+        '    ElseIf drpEnglish.SelectedValue = "No" Then
+        '        WorkingData.EnrolmentRequestRow.StudentFirstLanguageID = 25
+        '    End If
+        'End If
+
+        'Euro
+        'If drpEuroResident.SelectedValue = "" Then
+        '    Dim v As New CustomValidator()
+        '    v.ErrorMessage = "Please select an option for European Resident"
+        '    v.IsValid = False
+        '    Me.Page.Validators.Add(v)
+        '    Me.ValidationSummary1.ShowSummary = True
+        'Else
+        '    If drpEuroResident.SelectedValue = "Yes" Then
+        '        WorkingData.EnrolmentRequestRow.EuroResidentID = 1
+        '    ElseIf drpEuroResident.SelectedValue = "No" Then
+        '        WorkingData.EnrolmentRequestRow.EuroResidentID = 0
+        '    End If
+        'End If
+
+        ''Immigration
+        'If drpImmigrationRestriction.SelectedValue = "" Then
+        '    Dim v As New CustomValidator()
+        '    v.ErrorMessage = "Please select an option for Immigration Restriction"
+        '    v.IsValid = False
+        '    Me.Page.Validators.Add(v)
+        '    Me.ValidationSummary1.ShowSummary = True
+        'Else
+        '    WorkingData.EnrolmentRequestRow.StudentDetailUserDefined1 = drpImmigrationRestriction.SelectedValue
+        'End If
+ 
+        ''Asylum
+        'If fldAsylum.SelectedValue = "" Then
+        '    Dim v As New CustomValidator()
+        '    v.ErrorMessage = "Please select an option for Asylum Seeker"
+        '    v.IsValid = False
+        '    Me.Page.Validators.Add(v)
+        '    Me.ValidationSummary1.ShowSummary = True
+        'Else
+        '    WorkingData.EnrolmentRequestRow.StudentDetailUserDefined2 = fldAsylum.SelectedValue
+        'End If
+
+        ''FT Education
+        'If drpFulltimeEducation.SelectedValue = "" Then
+        '    Dim v As New CustomValidator()
+        '    v.ErrorMessage = "Please select an option for the purpose for entering UK/EU"
+        '    v.IsValid = False
+        '    Me.Page.Validators.Add(v)
+        '    Me.ValidationSummary1.ShowSummary = True
+        'Else
+        '    WorkingData.EnrolmentRequestRow.StudentDetailUserDefined3 = drpFulltimeEducation.SelectedValue
+        'End If
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined7 = drpReligion.SelectedValue
+    End Sub
+    Private Sub btnContinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnContinue.Click
+
+        Me.Page.Validate()
+
+        'If Me.Page.IsValid Then
+        '    'If fldEuroResidentID.Value = False Then
+        '    '    Response.Redirect(GetResourceValue("onlineenrolmentnotavailable_e_aspx"))
+        '    'End If
+        '    If drpEuroResident.SelectedValue IsNot "" And drpImmigrationRestriction.SelectedValue IsNot "" And drpCriminal.SelectedValue IsNot "" And fldAsylum.SelectedValue IsNot "" Then
+        '        If drpEuroResident.SelectedValue = "Yes" And drpImmigrationRestriction.SelectedValue = "N" And drpCriminal.SelectedValue = "N" And fldAsylum.SelectedValue = "N" Then
+        '            Me.Page.Validate()
+        '        Else
+        '            Me.Page.Validate()
+        '            Response.Redirect(GetResourceValue("onlineapplicationnotavailable_e_aspx"), True)
+        '        End If
+        '        Me.Page.Validate()
+        '    End If
+
+        'End If
+
+    End Sub
+
+End Class

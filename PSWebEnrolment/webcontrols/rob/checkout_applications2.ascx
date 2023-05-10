@@ -1,0 +1,145 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="checkout_applications2.ascx.vb" Inherits="webcontrols_checkout_applications2" %>
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<br /><br />
+                <ol class="breadcrumb">
+                  <li><a href="default.aspx">Home</a></li>
+                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout.ascx">Checkout</a></li>
+                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_applications.ascx">Personal Details</a></li>
+                    <li><a href="webenrolment.aspx?page=~/webcontrols/address_0.ascx">Address</a></li>
+                  <li class="active">Further Details</li>
+                </ol>
+   
+<div class="panel panel-success">   
+
+<div class="panel-heading">Further Details</div>
+
+<asp:Label ID="Label1" Text="The following information is confidential and can help the College know that you might need financial or other support, and can help put that in place before you start your course. " runat ="server">   </asp:Label>
+
+<br />
+<br />
+    <%--<div class="panel-heading">Support for your course</div>--%>
+    <div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="DisabilityCategory1ID"  ID="fldDisabilityID" runat="server" IsRequired="false" LabelWidth="300"
+            CustomCaption="Do you have any disabilities?" />
+    </div>
+    <div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="DisabilityCategory2ID" ID="fldLearningDifficultyID" runat="server" IsRequired="false" LabelWidth="300"
+            CustomCaption="Do you have any learning difficulties?" />
+    </div>
+
+    <br />
+<%--    <div class="panel-heading">Nationality *</div>--%>
+   <%-- <div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="NationalityID" ID="fldNationalityID" runat="server" LabelWidth="300"
+          CustomCaption="Nationality" IsRequired="true"  />
+    </div>--%>
+    <%--<div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="CountryID"  ID="fldHomeCountry" runat="server" LabelWidth="300"
+            CustomCaption="In which country do you normally live ?"   />
+    </div>--%>
+  <%--  <br />
+     <div class="panel-heading">Residence</div>
+    <div>*Note: you may be required to provide further documentary evidence of your status in the UK</div>
+    <br />--%>
+ <%--   <div class="form-group">
+    <asp:Label ID="lblEnglish" Text="Is English your first language? *" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpEnglish" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true" >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Yes"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="No"></asp:ListItem>
+    </asp:DropDownList>
+    </div>--%>
+   <%-- <div class="form-group">
+    <asp:Label ID="lblEuro" Text="Have you been a European resident for the past 3 years? *" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpEuroResident" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true" >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Yes"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="No"></asp:ListItem>
+    </asp:DropDownList>
+    </div>
+     <div class="form-group">
+    <asp:Label ID="lblImmigration" Text="Are there any immigration restrictions on how long you can stay in the UK? (Yes/No) *" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpImmigrationRestriction" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true" >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Y"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="N"></asp:ListItem>
+    </asp:DropDownList>
+    </div>  
+    <div class="form-group">
+    <asp:Label ID="lblAsylum" Text="Are you registered as an Asylum Seeker? (Yes/No) *" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="fldAsylum" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true"  >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Y"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="N"></asp:ListItem>
+    </asp:DropDownList>
+    </div>
+    <div class="form-group">
+    <asp:Label ID="lblFTEducation" Text="Was your purpose for entering the UK/EU mainly to receive full-time education? (Yes/No) *" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpFulltimeEducation" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true"  >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Y"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="N"></asp:ListItem>
+    </asp:DropDownList>
+    </div>--%>
+      <div class="form-group">
+
+     
+
+    <div class=" form-group">
+    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="CareLeaver" ID="fldCareLeaver" runat="server" IsRequired="false" LabelWidth="1100" 
+    CustomCaption="Tick this box if you were previously in care." Width="35" />
+    </div>
+
+    <div class=" form-group">
+    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="LookedAfter" ID="fldLookedAfter" runat="server" IsRequired="false" LabelWidth="1100" 
+    CustomCaption="Tick this box if you are currently looked after (in care)." Width="35" />
+    </div>
+
+   <%-- <asp:Label ID="lblCriminal" Text="Do you have an unspent criminal conviction (as defined by the Rehabilitation of Offenders Act 1974) ? (Yes/No) *  <br/>If you need further advice please call Learner Services on <strong> 0117 312 5000</strong>" runat ="server"></asp:Label><br />--%>
+    <asp:Label ID="lblCriminal" Text="Do you have any criminal convictions? (you may exclude any spent convictions as defined by the Rehabilitation of Offenders Act 1974) *" runat ="server">   </asp:Label><br />
+    For more information <a href="http://www.gov.uk/exoffenders-and-employment" target ="_blank">www.gov.uk/exoffenders-and-employment</a>
+    <br/>If you need further advice please call Learner Services on <strong> 0117 312 5000</strong>
+    <br />
+    <br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpCriminal" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true" >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Yes" Value ="Y"></asp:ListItem>
+    <asp:ListItem Text ="No" Value ="N"></asp:ListItem>
+    </asp:DropDownList>
+    </div>
+   <%--     <div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="DateOfEntryUK"  ID="fldUKEntryDate" runat="server"  LabelWidth="300" ClientIDMode="Static" CustomFieldType="Date" CustomCaption="Date of arrival in the UK/EU(dd/mm/yyyy)"   />        
+    </div>--%>
+    <br />
+   <%--  <div class="panel-heading">Ethnicity and belief - the college is committed to equality of opportunity</div>  
+    <div class="form-group">
+        <cc1:StudentEnrolmentField StudentEnrolmentFieldType="EthnicGroupID" ID="fldEthnicGroupID" runat="server" IsRequired="false" LabelWidth="300"
+            CustomCaption="Ethnicity" />
+    </div>
+
+    <div class="form-group">
+    <asp:Label ID="lblReligion" Text="Belief" runat ="server"></asp:Label><br />
+    <asp:DropDownList runat="server" ClientIDMode="Static" ID="drpReligion" AppendDataBoundItems="true" CssClass="form-control" EnableViewState="true"  >
+    <asp:ListItem Text ="" Value =""></asp:ListItem>
+    <asp:ListItem Text ="Buddhist" Value ="Buddhist"></asp:ListItem>
+    <asp:ListItem Text ="Christian" Value ="Christian"></asp:ListItem>
+    <asp:ListItem Text ="Hindu" Value ="Hindu"></asp:ListItem>
+    <asp:ListItem Text ="Jewish" Value ="Jewish"></asp:ListItem>
+    <asp:ListItem Text ="Muslim" Value ="Muslim"></asp:ListItem>
+    <asp:ListItem Text ="Sikh" Value ="Sikh"></asp:ListItem>
+    <asp:ListItem Text ="Other" Value ="Other"></asp:ListItem>
+    <asp:ListItem Text ="Prefer not to say" Value ="Prefer not to say"></asp:ListItem>
+    </asp:DropDownList>
+    </div>
+       
+</div>--%>
+<cc1:NonEUValidator ID="nonEUValidator1" runat="server"></cc1:NonEUValidator>
+
+
+
+        <cc1:CCCButton id="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="address_0_aspx"/>
+        <cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" LinkResource="checkout_parentguardian_aspx" CausesValidation="true" />
+    <br />
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />

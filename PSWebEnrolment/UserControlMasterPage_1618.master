@@ -1,0 +1,201 @@
+<%@ Master Language="VB" CodeFile="UserControlMasterPage_1618.master.vb" Inherits="UserControlMasterPage" %>
+
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server" id="header">
+    <meta name="description" content="City of Bristol College" />
+    <meta name="keywords" content="For all your training needs" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="reply-to" content="enquiries@citofbristol.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-language" content="EN" />
+    <meta name="language" content="en" />
+    <meta name="document-type" content="Public" />
+    <meta name="country" content="uk" />
+    <meta name="url" content="www.cityofbristol.ac.uk" />
+    <meta name="copyright" content="&copy; Copyright City of Bristol College" />
+    <meta name="creator" content="City of Bristol College" />
+    <title>City of Bristol College Online Enrolment &amp; Applications</title> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    
+
+</head>
+<body id="body" runat="server" class='testClass'>
+<!--<button class='final-step' style='background: red;'>THIS IS THE FINAL STEP</button>-->
+
+ <form id="form1" runat="server">
+<!-- **** Start of new mark up for header  **** -->
+<header role="banner">
+
+    <div class="top-row">
+        <div class="inner">
+            <a class="icon-telephone" href="tel:0117 312 5000">0117 312 5000</a>
+            <a class="icon-email" href="http://www.cityofbristol.ac.uk/contact/">Contact Us</a> 
+            </div>
+        <div id="regLoggedIn" class="nav navbar-nav pull-right" runat="server" ClientIDMode="Static">
+                        <ul class="nav navbar-nav">                          
+                            <li> <p runat="server" ID="username" style="color:#999;padding-top:15px" ClientIDMode="Static"/></li>                        
+                              <li>  <asp:HyperLink ID="lnkLogout" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Logout.ascx">Log out</asp:HyperLink></li>
+                        </ul>
+         </div>       
+          
+      </div>  
+
+    <div class="white inner">
+        <div class="logo">
+            <a href="http://www.cityofbristol.ac.uk"><img src="_images/logo.png" alt="College Logo" /></a>
+        </div>
+
+        <ul class="link-row">
+             <li> <span class="wglyphicon glyphicon-shopping-cart"/><cc1:ShoppingBasketTotals ID="ShoppingBasket" runat="server" ClientIDMode="Static" HideIcon="true" Visible="false"/></li>
+           <%-- <li><a id="ctl00_HyperLink4" href="webenrolment.aspx?page=~/webcontrols/help.ascx">Help</a></li>  --%>           
+        </ul>
+        <div id="regLinks"  runat="server" ClientIDMode="Static">
+      
+        </div>
+        
+
+
+    </div>
+
+
+
+</header>
+
+<!-- **** End of new mark up for header **** -->
+      <%--
+        <div style='display: none;'>
+            Style sheets must be enabled to view this page as it was intended.
+        </div>--%>
+
+        <div class="container">
+            <div class="body-content" id="content">                        
+                <asp:ContentPlaceHolder ID="MainContentPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+                
+    <!-- **** End of new mark up for Footer **** -->
+                
+
+            </div>
+        </div>
+
+    </form>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: transparent;">
+       
+        <div class="nav navbar-collapse" id="navapps" runat="server">
+          <%--  <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Skip to Page... <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/search.ascx">Search</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_applications.ascx">Personal Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout.ascx">Courses</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/address_0.ascx">Address</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_applications2.ascx">Further Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Parent / Guardian</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_school_employer.ascx">School / Employer</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection_apponly.ascx">Declaration</a></li>
+                    </ul>
+                </li>
+            </ul>--%>
+
+        </div>
+
+        <div class="nav navbar-collapse" id="navenrols" runat="server">
+          <%--  <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Skip to Page... <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/search.ascx">Search</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx">Personal Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/address_0.ascx">Address</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx">Further Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Parent / Guardian</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_school_employer.ascx">School / Employer</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_prior_attainment.ascx">Prior Attainment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx">Quals on Entry</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_references.ascx">References</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_employment.ascx">Employment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_attachments.ascx">Attachments</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx">Declaration</a></li>
+                    </ul>
+                </li>
+            </ul>--%>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+ <!-- **** Start of new mark up for Footer **** -->
+    <footer role="contentinfo">
+        <div class="inner">
+            <div class="footer-links">
+                <div class="col">
+                    <h4><a href="">Get in touch</a></h4>
+
+                    <ul class="get-in-touch">
+                        <li><a href="tel:01173125000" class="flaticon-call">0117 312 5000</a></li>
+                        <li><a href="mailto:enquiries@cityofbristol.ac.uk" class="flaticon-email">Contact us</a></li>
+                      </ul>
+                </div>
+
+               <%-- <div class="col">
+                    <h4>Skip to Page...</h4>
+
+                    <ul>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/search.ascx">Search</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx">Personal Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx">Further Details</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Parent / Guardian</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_school_employer.ascx">School / Employer</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_prior_attainment.ascx">Prior Attainment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx">Quals on Entry</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_references.ascx">References</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_employment.ascx">Employment</a></li>
+                        <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx">Declaration</a></li>
+                    </ul>
+                </div>--%>
+
+
+                <div class="col">
+                    <h4>Connect with us</h4>
+
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/cobcollege" class="flaticon-facebook"></a></li>
+                        <li><a href="https://twitter.com/cobcollege" class="flaticon-twitter"></a></li>
+                        <li><a href="https://www.youtube.com/user/cobcollege" class="flaticon-youtube"></a></li>
+                        <li><a href="https://www.linkedin.com/company/city-of-bristol-college" class="flaticon-linkedin"></a></li>
+                    </ul>
+                </div><!--// .footer-links-->
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="inner">
+                <p>&#169; 2020 City of Bristol College</p>
+               
+                <ul>
+                    <li><a href="http://www.cityofbristol.ac.uk/terms-and-conditions" target="_blank">Terms and conditions</a></li>
+                    <li><a href="http://www.cityofbristol.ac.uk/freedom-of-information" target="_blank">Freedom of information</a></li>
+                    <li><a href="http://www.cityofbristol.ac.uk/sitemap">Site map</a></li>
+                </ul>
+             </div>
+            <br />
+           
+        </div>
+      
+      
+    </footer>
+    
+     <link href="_css/jquery-ui.min.css" rel="stylesheet" /> 
+     <link href="_css/jquery-ui.structure.min.css" rel="stylesheet" /> 
+     <link href="_css/jquery-ui.theme.min.css" rel="stylesheet" /> 
+     <!--script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js" integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo=" crossorigin="anonymous"></!--script>-->
+</body>
+</html>
