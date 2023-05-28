@@ -111,6 +111,8 @@
         PaymentSubmitter.ShouldSendEmailConfirmation = True
 
 
+        SystemSettings.SaveForLater = False ''CCCPS-80182: New setting to control Save for Later feature.
+
     End Sub
 
 

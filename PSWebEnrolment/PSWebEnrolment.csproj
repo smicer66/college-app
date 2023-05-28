@@ -136,11 +136,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bin\ProSolutionBusiness.dll</HintPath>
     </Reference>
-    <Reference Include="ProSolutionBusiness.XmlSerializers, Version=20.3.0.30, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ProSolutionBusiness.XmlSerializers">
       <HintPath>..\..\bin\ProSolutionBusiness.XmlSerializers.dll</HintPath>
     </Reference>
-    <Reference Include="PSWebEnrolmentKit, Version=22.3.0.2, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="PSWebEnrolmentKit, Version=22.5.0.8, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bin\PSWebEnrolmentKit.dll</HintPath>
     </Reference>
@@ -463,6 +462,7 @@
     <Content Include="Icons\icon-font.eot" />
     <Content Include="Icons\icon-font.ttf" />
     <Content Include="Icons\icon-font.woff" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Deploy to Test.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />

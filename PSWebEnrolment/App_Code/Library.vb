@@ -18,7 +18,7 @@ Public Module Library
     End Function
     Public Function GetConn() As String
         'Get the value text from the resources file
-        Return CStr("Data Source=(local); initial Catalog=pswebenrolmentreports;User Id=Ripple;Password=P5web3")
+        Return CStr("Data Source=cg-pro-web1-tst; initial Catalog=pswebenrolmentreports;User Id=Ripple;Password=rippleeffect")
     End Function
 End Module
 
