@@ -15,6 +15,7 @@ Partial Class account_ccc_DoPasswordReset
         Email = Request("Email")
         Verification = Request("vc")
 
+        lblPasswordInfo.Text = PasswordValidation.InfoMessage
         Dim result As VerficationResult = WebUserDataTable.CheckVerificationCodeIsValid(Email, Verification)
 
         Select Case result        
@@ -43,10 +44,21 @@ Partial Class account_ccc_DoPasswordReset
 
     Public Overrides Sub ValidateControl()
         MyBase.ValidateControl()
+        ''CCCPS-78454: Validating password based on applied policy.
+        Dim m_errortext As String = String.Empty
+        If Len(Request.Form("passwordnew")) > 0 AndAlso Len(Request.Form("password_mirror")) > 0 Then
+            If Request.Form("passwordnew") <> Request.Form("password_mirror") Then
+                m_errortext = "Password does not match"
+            ElseIf Not PasswordValidation.IsValid(Request.Form("passwordnew")) Then
+                m_errortext = PasswordValidation.ErrorMessage
+            End If
+        Else
+            m_errortext = "You must enter a 'New Password' and 'Retype New Password' to update the password."
+        End If
 
-        If Len(Request.Form("passwordnew")) < 6 Then
+        If Len(m_errortext) > 0 Then
             Dim v As New CustomValidator()
-            v.ErrorMessage = "Password must be at least 6 characters."
+            v.ErrorMessage = m_errortext
             v.IsValid = False
             Me.Page.Validators.Add(v)
             Me.ValidationSummary1.ShowSummary = True

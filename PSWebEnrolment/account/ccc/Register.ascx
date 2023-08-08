@@ -6,8 +6,8 @@
     <li class="active">Register</li>
 </ol>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css" />
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css" />
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.js"></script>
 
 
 <br /><br />
@@ -15,73 +15,74 @@
 
 <div class="panel panel-info">
     <div class="panel-heading">Register an account</div>
-        <div class="container">         
+        <div>         
             
                 <%--<form  id="registerform">--%>
                 
                     <div class=" form-group">
                          <label for="firstname" class="label2 textfieldlabelrequired">First Name</label>
-                        <input type="text" id="firstname" class="form-control" name="pre[firstname]" placeholder="Your first name here..." autocomplete="off" required autofocus  />
-                    </div>
+                        <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Your first name here..." autocomplete="off" required autofocus  />
+                      </div>
                     <div class=" form-group">
                          <label for="surname" class="label2 textfieldlabelrequired">Surname</label>
-                        <input type="text" id="surname" class="form-control" name="pre[surname]" placeholder="Your surname here..." autocomplete="off" required />
+                        <asp:TextBox ID="txtSurname" runat="server" CssClass="form-control" placeholder="Your surname here..." autocomplete="off" required />
                     </div>
                     <div class=" form-group">
                          <label for="title" class="label2 textfieldlabelrequired">Title</label>
-                        <select id="title" class="form-control" name="pre[title]" title="Title" >
-                            <option></option>
-                            <option>Mr</option>
-                            <option>Mrs</option>
-                            <option>Miss</option>
-                            <option>Ms</option>
-                            <option>Dr</option>
-                            <option>Br</option>
-                        </select>                  
+                        <asp:DropDownList ID="ddlTitle" runat="server" CssClass="form-control" title="Title" >
+                            <asp:ListItem Text="" Value=""></asp:ListItem>
+                            <asp:ListItem Text="Mr" Value="Mr"></asp:ListItem>
+                            <asp:ListItem Text="Mrs" Value="Mrs"></asp:ListItem>
+                            <asp:ListItem Text="Miss" Value="Miss"></asp:ListItem>
+                            <asp:ListItem Text="Ms" Value="Ms"></asp:ListItem>
+                            <asp:ListItem Text="Dr" Value="Dr"></asp:ListItem>
+                            <asp:ListItem Text="Br" Value="Br"></asp:ListItem>
+                        </asp:DropDownList>                  
                     </div>
                     <div class=" form-group">
                          <label for="sex" class="label2 textfieldlabelrequired">Sex</label>
-                        <select  id="sex" class="form-control" name="pre[sex]" title="Sex">
-                            <option></option>
-                            <option title="Male">M</option>
-                            <option title="Female">F</option>
-                        </select>                      
+                        <asp:DropDownList ID="ddlSex" runat="server" CssClass="form-control" title="Sex">
+                            <asp:ListItem Text="" Value=""></asp:ListItem>
+                            <asp:ListItem Text="Male" Value="M"></asp:ListItem>
+                            <asp:ListItem Text="Female" Value="F"></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                     <div class=" form-group">
-                         <label for="dateofbirth" class="label2 textfieldlabelrequired">Date of Birth</label>
-                        <input type="date" id="dateofbirth" class="form-control" name="pre[dateofbirth]" autocomplete="off"  />
+                         <label for="dob" class="label2 textfieldlabelrequired">Date of Birth</label>
+                        <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" autocomplete="off"  />
                     </div>
                     <div class=" form-group">
                          <label for="address1" class="label2">Address Line 1</label>
-                        <input type="text" id="address1" class="form-control" name="pre[address1]"  autocomplete="off" />
+                        <asp:TextBox ID="txtAddress1" runat="server" CssClass="form-control" autocomplete="off" />
                     </div>
                     <div class=" form-group">
                          <label for="address2" class="label2">Address Line 2</label>
-                        <input type="text" id="address2" class="form-control" name="pre[address2]"  autocomplete="off" />
+                        <asp:TextBox ID="txtAddress2" runat="server" CssClass="form-control" autocomplete="off" />
                     </div>
                     <div class=" form-group">
                          <label for="address3" class="label2">Address Line 3</label>
-                        <input type="text" id="address3" class="form-control" name="pre[address3]"  autocomplete="off" />
+                        <asp:TextBox ID="txtAddress3" runat="server" CssClass="form-control" autocomplete="off" />
                     </div>
                      <div class=" form-group">
                          <label for="address4" class="label2">Address Line 4</label>
-                        <input type="text" id="address4" class="form-control" name="pre[address4]"  autocomplete="off" />
+                        <asp:TextBox ID="txtAddress4" runat="server" CssClass="form-control" autocomplete="off" />
                     </div>
                     <div class=" form-group">
                          <label for="postcode" class="label2">Postcode</label>
-                        <input type="text" id="postcode" class="form-control" name="pre[postalcode]" placeholder="Your postcode here..." autocomplete="off" />
+                        <asp:TextBox ID="txtPostcode" runat="server" CssClass="form-control" placeholder="Your postcode here..." autocomplete="off" />
                     </div>
                     <div class=" form-group">
                          <label for="email" class="label2 textfieldlabelrequired">Email</label>
-                        <input type="email" id="email" class="form-control" name="pre[email]" placeholder="Your E-mail here..." autocomplete="off" required />
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Your E-mail here..." autocomplete="off" required />
                     </div>                   
                     <div class=" form-group">
                         <label for="password" class="label2 textfieldlabelrequired">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Your password here..." autocomplete="off" required />
-                    </div>
+                        <asp:TextBox ID="txtPassword" ClientIDMode="Static" runat="server" Cssclass="form-control" TextMode="Password" placeholder="Your password here..." autocomplete="off" required />
+                        <asp:Label ID="lblPasswordInfo" runat="server" Font-Size="12px"></asp:Label>
+                    </div>                    
                     <div class=" form-group">
                         <label for="password_mirror" class="label2 textfieldlabelrequired">Retype Password</label>
-                        <input type="password" id="password_mirror" name="password_mirror" class="form-control"  placeholder="Retype your password..." autocomplete="off" required  oninput="check(this)"/>
+                        <asp:TextBox ID="txtPassword_Mirror" runat="server" Cssclass="form-control" TextMode="Password" placeholder="Retype your password..." autocomplete="off" required  oninput="check(this)"/>
                     </div>
                    
                     <div class=" form-group">
@@ -101,14 +102,14 @@
 
 <script>
     function check(input) {
-        if (input.value !== $("#password").val()) {
+        if (input.value !== $("#txtPassword").val()) {
             input.setCustomValidity('Password does not match.');
         } else {
             // input is fine -- reset the error message
             input.setCustomValidity('');
         }
     }
-    
+
 </script>
 
 <style>

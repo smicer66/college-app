@@ -113,6 +113,16 @@
 
         SystemSettings.SaveForLater = False ''CCCPS-80182: New setting to control Save for Later feature.
 
+        ''Set particular configuration to 0 to bypass the check (for example, set MinUpperCaseRequired = 0 to let user set password without any upper case character(s). 
+        PasswordValidation.EnableNewPolicy = False
+        PasswordValidation.MinLength = 7
+        PasswordValidation.MinUpperCaseRequired = 1
+        PasswordValidation.MinLowerCaseRequired = 1
+        PasswordValidation.MinNumericRequired = 1
+        PasswordValidation.MinNonAlphaNumRequired = 1
+
+        SystemSettings.PreloadStudentInfo = False ''CCCPS-81074: New setting to control Pre-loading of student info via PS student record.
+
     End Sub
 
 

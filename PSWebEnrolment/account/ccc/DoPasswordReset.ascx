@@ -15,6 +15,7 @@
                     <div class=" form-group">
                         <label for="passwordnew" class="label2 ">Change Password</label>
                         <input type="password" id="passwordnew" name="passwordnew" class="form-control" placeholder="New password here..." autocomplete="off"   />
+                        <asp:Label ID="lblPasswordInfo" runat="server" Font-Size="12px"></asp:Label>
                     </div>
                     <div class=" form-group">
                         <label for="password_mirror" class="label2 ">Retype New Password</label>
