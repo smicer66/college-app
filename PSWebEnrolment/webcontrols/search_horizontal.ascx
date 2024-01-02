@@ -17,14 +17,15 @@
 <%--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ --%>
 <%--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ --%>
 
-
+<!--
 <style>
     #Panel1 input, #Panel1 select {
         margin-left:5px;
         margin-right: 5px;
     }
 </style>
-
+-->
+<link href="<%=ResolveUrl("~/webcontrols/search_horizontal.css")%>" rel="stylesheet" />
 
 <div class="row text-center">
  

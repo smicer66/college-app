@@ -122,7 +122,7 @@
 <cc1:CCCButton ID="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_prior_attainment" />
 <cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" />
 
-
+<!--
 <script type="text/javascript">
     $("#btnChooseFile").click(function () {
         $('#fuAttachment').click();
@@ -135,3 +135,5 @@
         return false;
     }    
 </script>
+-->
+<script type="text/javascript" src="<%=ResolveUrl("~/webcontrols/checkout_attachments.js") %>"></script>

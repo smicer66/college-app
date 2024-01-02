@@ -100,6 +100,7 @@
        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />
     </div>
 
+<!--
 <script>
     function check(input) {
         if (input.value !== $("#txtPassword").val()) {
@@ -115,3 +116,7 @@
 <style>
     .label2 {display:inline-block;width:200px;}
 </style>
+-->
+
+<link href="<%= ResolveUrl("~/account/ccc/Register.css") %>"rel="stylesheet" />
+<script type="text/javascript" src="<%=ResolveUrl("~/account/ccc/Register.js") %>"></script>

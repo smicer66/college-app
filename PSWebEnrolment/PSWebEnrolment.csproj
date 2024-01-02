@@ -190,19 +190,34 @@
     <Content Include="account\ccc\AccountCreated.ascx" />
     <Content Include="account\ccc\AccountCreated.ascx.vb" />
     <Content Include="account\ccc\DoPasswordReset.ascx" />
-    <Content Include="account\ccc\DoPasswordReset.ascx.vb" />
+    <Content Include="account\ccc\DoPasswordReset.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="account\ccc\DoPasswordReset.css" />
+    <Content Include="account\ccc\DoPasswordReset.js" />
     <Content Include="account\ccc\EmailVerification.ascx" />
     <Content Include="account\ccc\EmailVerification.ascx.vb" />
     <Content Include="account\ccc\Login.ascx" />
-    <Content Include="account\ccc\Login.ascx.vb" />
+    <Content Include="account\ccc\Login.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="account\ccc\Login.css" />
     <Content Include="account\ccc\Logout.ascx" />
     <Content Include="account\ccc\Logout.ascx.vb" />
     <Content Include="account\ccc\PasswordReset.ascx" />
     <Content Include="account\ccc\PasswordReset.ascx.vb" />
     <Content Include="account\ccc\Register.ascx" />
-    <Content Include="account\ccc\Register.ascx.vb" />
+    <Content Include="account\ccc\Register.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="account\ccc\Register.css" />
+    <Content Include="account\ccc\Register.js" />
     <Content Include="account\ccc\UserAccount.ascx" />
-    <Content Include="account\ccc\UserAccount.ascx.vb" />
+    <Content Include="account\ccc\UserAccount.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="account\ccc\UserAccount.css" />
+    <Content Include="account\ccc\UserAccount.js" />
     <Content Include="App_Code\AFDPostCodeAPI.vb" />
     <Content Include="App_Code\CourseSearchPanel_ListView.vb" />
     <Content Include="App_Code\CustomPaymentSubmitter.vb" />
@@ -496,7 +511,10 @@
     <Content Include="UserControlMasterPage_1618.master.vb" />
     <Content Include="UserControlMasterPage_old.master.vb" />
     <Content Include="webcontrols\address_0.ascx" />
-    <Content Include="webcontrols\address_0.ascx.vb" />
+    <Content Include="webcontrols\address_0.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\address_0.js" />
     <Content Include="webcontrols\address_1.ascx" />
     <Content Include="webcontrols\address_1.ascx.vb" />
     <Content Include="webcontrols\address_2.ascx" />
@@ -508,7 +526,9 @@
     <Content Include="webcontrols\address_AFD.ascx" />
     <Content Include="webcontrols\address_AFD.ascx.vb" />
     <Content Include="webcontrols\address_AFDEvolution.ascx" />
-    <Content Include="webcontrols\address_AFDEvolution.ascx.vb" />
+    <Content Include="webcontrols\address_AFDEvolution.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\address_capscan.ascx" />
     <Content Include="webcontrols\address_capscan.ascx.vb" />
     <Content Include="webcontrols\address_getaddress.ascx" />
@@ -516,25 +536,37 @@
     <Content Include="webcontrols\address_matchcode360.ascx" />
     <Content Include="webcontrols\address_matchcode360.ascx.vb" />
     <Content Include="webcontrols\address_QASProOnDemand.ascx" />
-    <Content Include="webcontrols\address_QASProOnDemand.ascx.vb" />
+    <Content Include="webcontrols\address_QASProOnDemand.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\address_QASProOnDemand.js" />
     <Content Include="webcontrols\address_QASProOnDemandProcess.ascx" />
     <Content Include="webcontrols\address_QASProOnDemandProcess.ascx.vb" />
     <Content Include="webcontrols\checkout.ascx" />
-    <Content Include="webcontrols\checkout.ascx.vb" />
+    <Content Include="webcontrols\checkout.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\checkout_20170103.ascx" />
     <Content Include="webcontrols\checkout_applications - 20170406.ascx" />
     <Content Include="webcontrols\checkout_applications.ascx" />
     <Content Include="webcontrols\checkout_applications.ascx - 20170406.vb" />
-    <Content Include="webcontrols\checkout_applications.ascx.vb" />
+    <Content Include="webcontrols\checkout_applications.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\checkout_applications2 - 20170406.ascx" />
     <Content Include="webcontrols\checkout_applications2.ascx" />
-    <Content Include="webcontrols\checkout_applications2.ascx.vb" />
+    <Content Include="webcontrols\checkout_applications2.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\checkout_applications2_20170103.ascx" />
     <Content Include="webcontrols\checkout_applications2_uat.ascx" />
     <Content Include="webcontrols\checkout_applications2_uat.ascx.vb" />
     <Content Include="webcontrols\checkout_applications_old.ascx" />
     <Content Include="webcontrols\checkout_attachments.ascx" />
-    <Content Include="webcontrols\checkout_attachments.ascx.vb" />
+    <Content Include="webcontrols\checkout_attachments.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\checkout_attachments.js" />
     <Content Include="webcontrols\checkout_attachments_photos.ascx" />
     <Content Include="webcontrols\checkout_attachments_photos.ascx.vb" />
     <Content Include="webcontrols\checkout_dataprotection.ascx" />
@@ -548,7 +580,10 @@
     <Content Include="webcontrols\checkout_enquiries.ascx" />
     <Content Include="webcontrols\checkout_enquiries.ascx.vb" />
     <Content Include="webcontrols\checkout_enrolments.ascx" />
-    <Content Include="webcontrols\checkout_enrolments.ascx.vb" />
+    <Content Include="webcontrols\checkout_enrolments.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\checkout_enrolments.js" />
     <Content Include="webcontrols\checkout_enrolments2.ascx" />
     <Content Include="webcontrols\checkout_enrolments2.vb" />
     <Content Include="webcontrols\checkout_enrolments2_uat.ascx" />
@@ -570,14 +605,20 @@
     <Content Include="webcontrols\checkout_references.ascx" />
     <Content Include="webcontrols\checkout_references.ascx.vb" />
     <Content Include="webcontrols\checkout_school_employer.ascx" />
-    <Content Include="webcontrols\checkout_school_employer.ascx.vb" />
+    <Content Include="webcontrols\checkout_school_employer.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\checkout_school_employer.js" />
     <Content Include="webcontrols\contact.ascx" />
     <Content Include="webcontrols\contact.ascx.vb" />
     <Content Include="webcontrols\countries.all.inc" />
     <Content Include="webcontrols\courseapply.ascx" />
     <Content Include="webcontrols\courseapply.ascx.vb" />
     <Content Include="webcontrols\coursedisplay.ascx" />
-    <Content Include="webcontrols\coursedisplay.ascx.vb" />
+    <Content Include="webcontrols\coursedisplay.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\coursedisplay.js" />
     <Content Include="webcontrols\courseenquire.ascx" />
     <Content Include="webcontrols\courseenquire.ascx.vb" />
     <Content Include="webcontrols\courseenrol.ascx" />
@@ -608,9 +649,16 @@
     <Content Include="webcontrols\searchofferings.ascx" />
     <Content Include="webcontrols\searchofferings.ascx.vb" />
     <Content Include="webcontrols\search_horizontal.ascx" />
-    <Content Include="webcontrols\search_horizontal.ascx.vb" />
+    <Content Include="webcontrols\search_horizontal.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\search_horizontal.css" />
     <Content Include="webcontrols\StudentSignature.ascx" />
-    <Content Include="webcontrols\StudentSignature.ascx.vb" />
+    <Content Include="webcontrols\StudentSignature.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\StudentSignature.css" />
+    <Content Include="webcontrols\StudentSignature.js" />
     <Content Include="webcontrols\thankyou - Copy.ascx" />
     <Content Include="webcontrols\thankyou - Copy.ascx.vb" />
     <Content Include="webcontrols\thankyou.ascx" />

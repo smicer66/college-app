@@ -1,10 +1,12 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="StudentSignature.ascx.vb" Inherits="webcontrols_StudentSignature" %>
+<!--
 <style>
     #signature {
         width:500px;
     }
 </style>   
-
+    -->
+<link href="<%= ResolveUrl("~/webcontrols/StudentSignature.css") %>" rel="stylesheet" />
 <div class="form-group">
        <p>Signature</p>
        <div id="signature"></div>
@@ -17,6 +19,7 @@
 	<script type="text/javascript" src="scripts/jSignature/flashcanvas.js"></script>
 	<![endif]-->
 	<script src="scripts/jSignature/jSignature.min.js"></script>
+<!--
 <script>
     $(document).ready(function () {
         $("#signature").jSignature()
@@ -34,3 +37,5 @@
     });
 
 	</script>
+-->
+<script type="text/javascript" src="<%=ResolveUrl("~/webcontrols/StudentSignature.js") %>"></script>

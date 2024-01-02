@@ -123,7 +123,28 @@
 
         SystemSettings.PreloadStudentInfo = False ''CCCPS-81074: New setting to control Pre-loading of student info via PS student record.
 
+        'CCCPS-81189 - Image resizer settings. To reduce the size of image.
+        SystemSettings.UseImageResizeFeature = False
+        'Note that achieving an exact file size can be challenging due to the nature of image compression algorithms And variations in image content. 
+        'The resulting file size may still have slight variations. So for such images size can be little bigger than mentioned below.
+        SystemSettings.MaxReducedImageSize = 500000  'In Bytes only. i.e. given is 500KB
+
     End Sub
 
+    ''' <summary>
+    ''' CCCPS-78455 add samesite to cookies (same was already done in PS Web - CCCPS-78449)
+    ''' </summary>
+    Protected Sub Application_PreSendRequestHeaders()
+        Dim IsSameSiteEnabled As String = ConfigurationManager.AppSettings("SameSiteToCookie")
+        If Context IsNot Nothing AndAlso IsSameSiteEnabled = "1" Then
+            Dim cookieValueSuffix = "; Secure; SameSite=none"
+            Dim cookies = Context.Response.Cookies
+
+            For i = 0 To cookies.Count - 1
+                Dim cookie = cookies(i)
+                cookie.Value += cookieValueSuffix
+            Next
+        End If
+    End Sub
 
 </script>

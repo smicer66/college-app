@@ -22,12 +22,13 @@
         <script type="text/javascript" src="/js/ondemand/jquery/jquery.showLoading.min.js"></script>
         <script type="text/javascript" src="/js/ondemand/qas-ic.js"></script>
         <script type ="text/javascript" src="/js/ondemand/qas-ic.addresscapture.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $(function () {
                 qas.addresscapture.Initialize("div#QAS_Container");
             });
-        </script>
- 
+        </script>-->
+        <script type="text/javascript" src="<%=ResolveUrl("~/webcontrols/address_QASProOnDemand.js") %>"></script> 
+
     <body class="qas-font" style="display:none;" onload="">
         <br /><br />
        <div class="alert alert-info" id="alert1" runat="server">

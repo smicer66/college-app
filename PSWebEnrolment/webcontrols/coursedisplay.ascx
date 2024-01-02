@@ -128,7 +128,7 @@ It is essential that you inform us if your entitlement changes at any time durin
         <cc1:CCCButton id="btnBack" runat="server" Text="Back (Search for other courses)" ImageResource="btnBack" LinkResource="search_aspx"/>
 
 
-
+<!--
 <script type="text/javascript">
     
     $(document).ready(function () {
@@ -144,3 +144,5 @@ It is essential that you inform us if your entitlement changes at any time durin
     });
 
 </script>
+-->
+<script type="text/javascript" src="<%= ResolveUrl("~/webcontrols/coursedisplay.js") %>"></script>

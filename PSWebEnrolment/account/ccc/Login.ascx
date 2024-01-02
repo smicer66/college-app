@@ -25,14 +25,14 @@
                         <input type="password" id="password" name="password" class="form-control" placeholder="Your password here..." autocomplete="off" required />
                     </div>
                     <div class=" form-group">
-                        <p runat="server" id="errtext" style="color:red"></p>
-                        <asp:HyperLink ID="lnkReSend" visible="false" runat="server" ClientIDMode="Static" NavigateUrl="~/webenrolment.aspx?page=~/account/ccc/AccessPending.ascx" Style="color: #999; padding: 15px; height: 50px">Click here to request a new verification email.</asp:HyperLink>
+                        <p runat="server" id="errtext"></p>
+                        <asp:HyperLink ID="lnkReSend" visible="false" runat="server" ClientIDMode="Static" NavigateUrl="~/webenrolment.aspx?page=~/account/ccc/AccessPending.ascx" >Click here to request a new verification email.</asp:HyperLink>
                     </div>
                      <div class=" form-group">                  
                        <asp:Button runat="server" ID="btnLogin" Text="Login" CssClass="btn btn-primary btn-block" />
                     </div>
             <div class="form-group">
-                    <asp:HyperLink ID="lnkReset" runat="server" ClientIDMode="Static" NavigateUrl="~/webenrolment.aspx?page=~/account/ccc/PasswordReset.ascx" Style="color: #999; padding: 15px; height: 50px">If you have forgotten your password, click here.</asp:HyperLink>
+                    <asp:HyperLink ID="lnkReset" runat="server" ClientIDMode="Static" NavigateUrl="~/webenrolment.aspx?page=~/account/ccc/PasswordReset.ascx">If you have forgotten your password, click here.</asp:HyperLink>
                     
                 </div>
                
@@ -40,7 +40,9 @@
 
 </div>
 
-
+<!--
 <style>
     .label2 {display:inline-block;width:200px;}
 </style>
+-->
+<link href="<%= ResolveUrl("~/account/ccc/Login.css") %>" rel="stylesheet" />

@@ -18,7 +18,7 @@
 <div class="alert alert-info" id="alert1" runat="server">
 <h4>Please enter your postcode and partial address below:</h4>
 <p>Search: <asp:TextBox ID="txtLookup" runat="server" CssClass="formtext" ></asp:TextBox>
-<asp:Button ID="btnFind" runat="server" Text="Find" CausesValidation="False" /></p>
+<asp:Button ID="btnFind" runat="server" Text="Find" CausesValidation="False" UseSubmitBehavior="false" /></p>
 </div>
 <br>
 

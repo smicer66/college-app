@@ -10,10 +10,7 @@
 
 
 
-        <style>
-         
-         </style>
-
+<link href="<%= ResolveUrl("~/account/ccc/UserAccount.css") %>" rel="stylesheet" />
 
 
           <h3>User Account</h3>
@@ -96,7 +93,7 @@
       </asp:ListView>
 <a name="Details">
        <br /><br />
-</a><div class="panel panel-info" style="clear: left;" >
+</a><div class="panel panel-info">
     <div class="panel-heading">Update Details</div>
         <div>         
             
@@ -194,7 +191,7 @@
     </div>
 <br /><br />
 
-
+<!--
 <script>
     function check(input) {
         if (input.value !== $("#txtNewPassword").val()) {
@@ -206,3 +203,5 @@
     }
 
 </script>
+-->
+<script type="text/javascript" src="<%= ResolveUrl("~/account/ccc/UserAccount.js") %>"></script>

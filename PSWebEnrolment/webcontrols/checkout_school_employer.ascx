@@ -145,7 +145,7 @@
 
 
 
-
+<!--
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -186,3 +186,5 @@
     });
 
 </script>
+-->
+<script type="text/javascript" src="<%= ResolveUrl("~/webcontrols/checkout_school_employer.js") %>"></script>

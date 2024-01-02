@@ -3,8 +3,12 @@
 <%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
     TagPrefix="cc1" %>
 <asp:PlaceHolder ID="PlaceHolder1" runat="server">
-		<script type="text/javascript">
-			/* Reload the country selection and set the focus to the country dropdown */
+		
+        <script src="<%=ResolveUrl("~/Webcontrols/address_0.js")%>"></script>
+
+        <!--
+        <script type="text/javascript">
+			// Reload the country selection and set the focus to the country dropdown
 			function init()
 			{
 				var sDataID = "<%= GetDataID() %>";
@@ -15,7 +19,7 @@
 				document.FlatCountry.<%= com.qas.prowebintegration.Constants.FIELD_DATA_ID %>.focus();
 			}
 
-			/* Store the text of the DataID select control in the CountryName field */
+			// Store the text of the DataID select control in the CountryName field
 			function setCountryValue()  
 			{   
 			    var theForm = document.forms(0); 
@@ -23,7 +27,7 @@
 				theForm.<%= com.qas.prowebintegration.Constants.FIELD_COUNTRY_NAME %>.value = theForm.<%= com.qas.prowebintegration.Constants.FIELD_DATA_ID %>.options[iSelected].text;
 			}
 		</script>
-
+        -->
            <br /><br />
                 <ol class="breadcrumb" runat="server" id="breadcrumbapps">
                   <li><a href="default.aspx">Home</a></li>
@@ -55,7 +59,13 @@
        </div>
     
        </div>
-    <input name="<%= com.qas.prowebintegration.Constants.FIELD_COUNTRY_NAME %>" type="hidden"  /><p>
+    <!--<input name="<%= com.qas.prowebintegration.Constants.FIELD_COUNTRY_NAME %>" type="hidden"  />-->
+    <input name="<%:com.qas.prowebintegration.Constants.FIELD_COUNTRY_NAME %>" type="hidden" />
+ <input id="hdnDataID" type="hidden" value="<%: GetDataID() %>" />
+ <input id="hdnFieldDataID" type="hidden" value="<%:com.qas.prowebintegration.Constants.FIELD_DATA_ID %>" />
+ <input id="hdnCountryName" type="hidden" value="<%:com.qas.prowebintegration.Constants.FIELD_COUNTRY_NAME %>" />
+    
+    <p>
         <cc1:CCCButton id="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_enrolments_aspx"/>
         <cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" />
             &nbsp;</p>

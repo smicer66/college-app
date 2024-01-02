@@ -8,7 +8,7 @@
 
 
 <br /><br />
-
+<link href="<%= ResolveUrl("~/account/ccc/DoPasswordReset.css") %>" rel="stylesheet" />
 <div class="panel panel-info">
                         <div class="panel-heading">To change your password, enter your new password below</div>
                                      
@@ -35,7 +35,7 @@
              <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />
                </div>
 
-
+<!--
 <script>
     function check(input) {
         if (input.value !== $("#passwordnew").val()) {
@@ -47,3 +47,5 @@
     }
 
 </script>
+-->
+<script type="text/javascript" src="<%=ResolveUrl("~/account/ccc/DoPasswordReset.js") %>"></script>

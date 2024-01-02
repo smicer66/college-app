@@ -74,7 +74,15 @@ Partial Class webcontrols_address_AFDEvolution
 
 
         If IsPostBack Then
-            UpdateAddress()
+            'UpdateAddress()
+
+            If Request.Form("__EVENTTARGET") IsNot Nothing AndAlso Request.Form("__EVENTTARGET").EndsWith("btnFind") Then
+                findAddress()
+            End If
+            If lstresult.SelectedIndex >= 0 Then
+                UpdateAddress()
+            End If
+
         Else
             postcode.Value = WorkingData.EnrolmentRequestRow.PostcodeOut + WorkingData.EnrolmentRequestRow.PostcodeIn
         End If
@@ -91,10 +99,13 @@ Partial Class webcontrols_address_AFDEvolution
         Dim xmlLocation As String
 
         ' Create the XML Document Object Instance
-        xmlDoc = New System.Xml.XmlDocument()
+        'xmlDoc = New System.Xml.XmlDocument()
 
         ' Build up the XML query string
-        xmlLocation = BuildServerDetails(SearchType.Retrieve)
+        'xmlLocation = BuildServerDetails(SearchType.Retrieve)
+
+
+
 
         ' Replace lstResult with the name of your list box for the results
         With lstresult
@@ -116,10 +127,16 @@ Partial Class webcontrols_address_AFDEvolution
             ' Set XML parameter to retrieve the selected record
             lstStr = .Items.Item(.SelectedIndex).ToString
 
-            xmlLocation = xmlLocation + "&Key=" + lstStr.Substring(lstStr.Length - 40, 40).Trim
+            'xmlLocation = xmlLocation + "&Key=" + lstStr.Substring(lstStr.Length - 40, 40).Trim
 
             ' Finished with the list box
         End With
+
+        ' Create the XML Document Object Instance
+        xmlDoc = New System.Xml.XmlDocument()
+        ' Build up the XML query string
+        xmlLocation = BuildServerDetails(SearchType.Retrieve)
+        xmlLocation = xmlLocation & "&Key=" & lstStr.Substring(lstStr.Length - 40, 40).Trim
 
         ' Load the XML from the webserver with the query string
         Try
@@ -196,7 +213,7 @@ Partial Class webcontrols_address_AFDEvolution
         End If
 
     End Sub
-    Private Sub btnFind_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFind.Click
+    Private Sub findAddress()
 
         If txtLookup.Text = "" Then
             Dim v As New CustomValidator
