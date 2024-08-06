@@ -16,9 +16,10 @@
                   <li class="active">Address</li>
                 </ol>
 <div class="alert alert-info" id="alert1" runat="server">
-<h4>Please enter your postcode and partial address below:</h4>
+<h4>Please enter your postcode or partial address below:</h4>
 <p>Search: <asp:TextBox ID="txtLookup" runat="server" CssClass="formtext" ></asp:TextBox>
-<asp:Button ID="btnFind" runat="server" Text="Find" CausesValidation="False" UseSubmitBehavior="false" /></p>
+<asp:Button ID="btnFind" runat="server" Text="Find" CausesValidation="False" UseSubmitBehavior="false" />    
+<asp:Button ID="btnCSA" runat="server" Text="" AccessKey="S" CausesValidation="False" UseSubmitBehavior="false" style="display:none;" /></p>
 </div>
 <br>
 
@@ -26,8 +27,9 @@
 <div class="panel panel-info" id="panel1" runat="server">
     <div class="panel-heading">Search Results</div>
     <div class=" form-group">
-    <asp:ListBox ID="lstresult" runat="server" Width="75%" AutoPostBack="True"></asp:ListBox>
+    <asp:ListBox ID="lstresult" runat="server" Width="75%"></asp:ListBox>
     <br />
+			<asp:Button ID="btnFetchAddress" runat="server" Text="Fetch Selected Address" CausesValidation="False" UseSubmitBehavior="false" />																															   
 </div>
 
     <div class=" form-group">
