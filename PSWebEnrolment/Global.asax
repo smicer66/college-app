@@ -69,6 +69,10 @@
         CCCConfigLibrary.ReadConfigFromConfigFile(IO.Path.Combine(HttpRuntime.AppDomainAppPath, "web.dbconfig"))
         CCCConfigLibrary.ReadConfigFromMyAppDBConfigFile()
         CCCDatabaseConnectInfoList.LoadDatabaseInfoFromConfig()
+		
+		''This was required by CAF after we upgraded to 25.0.
+        CCCDatabaseConnectInfoList.LogicalAndMicroServiceNameMapping.Item("Enrolment") = "PSWebEnrolment"
+        CCCDatabaseConnectInfoList.LogicalAndMicroServiceNameMapping.Item("ExamA2C") = "PSWebEnrolment"
 
         'Set timeout values from config
         CCCConfigLibrary.SetAllFrameworkValuesFromConfig()
@@ -115,7 +119,8 @@
 
         ''Set particular configuration to 0 to bypass the check (for example, set MinUpperCaseRequired = 0 to let user set password without any upper case character(s). 
         PasswordValidation.EnableNewPolicy = False
-        PasswordValidation.MinLength = 7
+		'' defaults to 10 if set below
+        PasswordValidation.MinLength = 10 
         PasswordValidation.MinUpperCaseRequired = 1
         PasswordValidation.MinLowerCaseRequired = 1
         PasswordValidation.MinNumericRequired = 1

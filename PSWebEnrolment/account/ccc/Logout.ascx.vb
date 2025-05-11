@@ -18,6 +18,12 @@ Partial Class account_ccc_Logout
         WorkingData.TriggerSaveForLaterOnNextLoad = False
         WorkingData.SaveForLaterInObject = WorkingData.SaveForLaterObjects.All
 
+
+		'CCCPS-82675: Clearing the cookies
+        Session.Abandon()
+        For Each cookieKey As String In Request.Cookies.AllKeys
+            Response.Cookies(cookieKey).Expires = DateTime.Now.AddMonths(-10)
+        Next
         Response.Redirect("webenrolment.aspx?page=~/account/ccc/Login.ascx")
     End Sub
 
