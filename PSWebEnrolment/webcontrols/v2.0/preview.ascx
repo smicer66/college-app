@@ -1,0 +1,1062 @@
+﻿<%@ control Language="VB" AutoEventWireup="false" CodeFile="preview.ascx.vb" Inherits="preview"  %>
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<%-- <script src="/js/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/south-street/jquery-ui.css" />
+
+  <script>
+      $(function () {
+          $(function () {
+              $("#txtDateOfBirth").datepicker({ dateFormat: "dd/mm/yy", changeMonth: true, changeYear: true, yearRange: "1930:2000" })
+          });
+      });
+  </script>--%>
+
+    <style>
+    
+
+    * {
+      box-sizing: border-box;
+    }
+
+    
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    /* Breadcrumbs */
+
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 32px;
+      color: var(--muted);
+    }
+
+    .breadcrumbs a {
+      color: #536987;
+      text-decoration: none;
+    }
+
+    .breadcrumbs .separator {
+      color: #94a3b8;
+    }
+
+    .breadcrumbs .active {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    
+
+    /* Main card */
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h1 {
+      margin: 0 0 12px;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.25;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: #536987;
+      line-height: 1.7;
+      margin: 0 0 24px;
+      max-width: 850px;
+    }
+
+    /* Information box */
+
+    .info-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      background: #eff6ff;
+      margin-top: 28px;
+    }
+
+    .info-icon {
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+    }
+
+    .info-box h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .info-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #365b91;
+    }
+
+    /* Content */
+
+    .step-content {
+      min-height: 260px;
+    }
+
+    .step-content h2 {
+      font-size: 23px;
+      margin: 0 0 16px;
+    }
+
+    .step-content p {
+      color: #536987;
+      line-height: 1.7;
+      max-width: 850px;
+    }
+
+    .step-content ul {
+      color: #536987;
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    /* Footer navigation */
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+      padding-top: 24px;
+    }
+
+
+    .btn-secondary {
+      background: #eef2f7;
+      color: #64748b;
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background: #e2e8f0;
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .progress-text {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1100px) {
+      .stepper {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        row-gap: 24px;
+      }
+
+      .step::before {
+        display: none;
+      }
+
+      .step-label {
+        font-size: 12px;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 12px;
+      }
+
+      .breadcrumbs {
+        margin-bottom: 20px;
+        font-size: 12px;
+        gap: 6px;
+      }
+
+      .stepper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 24px;
+      }
+
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+        padding: 9px 12px;
+        border-radius: 8px;
+        min-height: 48px;
+      }
+
+      .step::before {
+        display: none;
+      }
+
+      .step-number {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+      }
+
+      .step-label {
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+      }
+
+      .step.active {
+        background: var(--primary-light);
+      }
+
+      .card {
+        padding: 24px 18px;
+        border-radius: 10px;
+      }
+
+      .card h1 {
+        font-size: 25px;
+      }
+
+      .intro {
+        font-size: 14px;
+      }
+
+      .info-box {
+        padding: 16px;
+        gap: 10px;
+      }
+
+      .step-content {
+        min-height: 220px;
+      }
+
+      .step-content h2 {
+        font-size: 21px;
+      }
+
+      .card-footer {
+        flex-wrap: wrap;
+      }
+
+      .progress-text {
+        order: 3;
+        flex-basis: 100%;
+      }
+
+      .btn {
+        padding: 12px 18px;
+      }
+    }
+
+    /* Personal Details form */
+    .form-section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .form-section:first-of-type { margin-top: 8px; }
+    .form-section h2 { margin: 0 0 20px; font-size: 21px; color: var(--text); }
+    .form-grid { display: grid; gap: 20px 24px; }
+    .form-group { min-width: 0; }
+    .form-group.full-width { grid-column: 1 / -1; }
+    .form-group label, .field-label { display:block; margin-bottom:7px; font-size:14px; font-weight:700; color:var(--text); }
+    .form-control { width:100%; min-width:0; height:44px; padding:10px 12px; border:1px solid #cbd5e1; border-radius:7px; background:#fff; color:var(--text); font:inherit; }
+    .form-control:focus { outline:3px solid #bfdbfe; outline-offset:1px; border-color:var(--primary); }
+    .checkbox-row { display:flex; align-items:flex-start; gap:9px; margin-top:9px; font-size:13px; color:#475569; }
+    .checkbox-row input { width:17px; height:17px; margin-top:1px; flex:0 0 auto; accent-color:var(--primary); }
+    .conditional-field[hidden] { display:none !important; }
+    .field-hint { margin:6px 0 0; font-size:12px; color:var(--muted); }
+    @media (max-width: 600px) { .form-grid { grid-template-columns:1fr !important; gap:17px; } .form-group.full-width { grid-column:auto; } .form-control { font-size:16px; } }
+    .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  
+    /* Contact Details */
+    .form-section{margin-top:28px}
+    .form-section+.form-section{margin-top:34px;padding-top:28px;border-top:1px solid var(--border)}
+    .form-section h2{margin:0 0 8px;font-size:21px}
+    .section-help{margin:0 0 20px;color:var(--muted);font-size:14px;line-height:1.6}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+    .form-group{min-width:0}
+    .full-width{grid-column:1/-1}
+    .form-group label,.field-label{display:block;margin-bottom:7px;font-size:14px;font-weight:700;color:var(--text)}
+    .required{color:#b91c1c}
+    .form-control{width:100%;min-height:44px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:var(--text);font:inherit}
+    .form-control:focus{outline:3px solid #bfdbfe;border-color:var(--primary)}
+    .checkbox-row{display:flex!important;align-items:flex-start;gap:9px;margin-top:10px;font-weight:400!important;color:#475569!important}
+    .checkbox-row input{width:18px;height:18px;margin:1px 0 0;accent-color:var(--primary);flex:0 0 auto}
+    .postcode-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+    .lookup-btn{min-height:44px;white-space:nowrap;padding:10px 16px}
+    .address-results{margin-top:10px}
+    .field-error{display:none;margin-top:6px;color:#b91c1c;font-size:13px}
+    .field-error.visible{display:block}
+    .hidden{display:none!important}
+    @media(max-width:700px){.contact-grid{grid-template-columns:1fr;gap:18px}.full-width{grid-column:auto}}
+    @media(max-width:430px){.postcode-row{gap:7px}.lookup-btn{padding:10px 11px;font-size:12px}}
+
+
+    /* Parent / Carer Details */
+    .radio-group{display:flex;flex-wrap:wrap;gap:12px 22px;min-height:44px;align-items:center}
+    .radio-option{display:flex!important;align-items:center;gap:8px;margin:0!important;font-weight:400!important;color:#475569!important;cursor:pointer}
+    .radio-option input{width:18px;height:18px;margin:0;accent-color:var(--primary)}
+    .form-hint{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.45}
+
+
+    /* Residency Status */
+    .advice-box{padding:18px 20px;border:1px solid #bfdbfe;border-radius:8px;background:var(--primary-light);color:#365b91;font-size:14px;line-height:1.65;margin-bottom:22px}
+    .advice-box strong{color:var(--text)}
+    .date-format{margin-top:6px;color:var(--muted);font-size:12px}
+
+
+    /* Qualifications */
+    .section-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .section-heading-row h2{margin:0 0 8px}
+    .section-heading-row .section-help{margin-bottom:0}
+    .qualification-editor{padding:20px;border:1px solid var(--border);border-radius:9px;background:#f8fafc}
+    .qualification-editor .contact-grid{align-items:end}
+    .qualification-actions{display:flex;justify-content:flex-end;align-items:end;height:100%}
+    .qualification-table-wrap{width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:9px}
+    .qualification-table{width:100%;border-collapse:collapse;min-width:720px;background:#fff}
+    .qualification-table th,.qualification-table td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;font-size:14px;vertical-align:middle}
+    .qualification-table th{background:#f8fafc;color:var(--text);font-weight:700}
+    .qualification-table tbody tr:last-child td{border-bottom:0}
+    .empty-row td{text-align:center;color:var(--muted);padding:26px 16px}
+    .btn-danger{background:#fff1f2;color:#b91c1c;border:1px solid #fecdd3}
+    .btn-danger:hover{background:#ffe4e6}
+    .qualification-count{margin:10px 0 0;color:var(--muted);font-size:13px}
+    @media(max-width:700px){
+      .section-heading-row{flex-direction:column;align-items:stretch}
+      .section-heading-row .btn{align-self:flex-start}
+      .qualification-editor{padding:16px}
+      .qualification-actions{justify-content:flex-start}
+      .qualification-table-wrap{overflow-x:visible;border:0}
+      .qualification-table,.qualification-table tbody,.qualification-table tr,.qualification-table td{display:block;width:100%;min-width:0}
+      .qualification-table thead{display:none}
+      .qualification-table tbody{display:grid;gap:12px}
+      .qualification-table tr{border:1px solid var(--border);border-radius:9px;background:#fff;padding:12px}
+      .qualification-table td{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px;padding:8px 4px;border:0}
+      .qualification-table td::before{content:attr(data-label);font-weight:700;color:var(--text)}
+      .qualification-table .empty-row td{display:block;text-align:center;padding:20px}
+      .qualification-table .empty-row td::before{display:none}
+    }
+
+
+    /* Personal Statement */
+    .statement-wrap{width:100%}
+    .statement-textarea{
+      width:100%;
+      min-height:240px;
+      resize:vertical;
+      padding:14px 16px;
+      border:1px solid #cbd5e1;
+      border-radius:8px;
+      background:#fff;
+      color:var(--text);
+      font:inherit;
+      font-size:15px;
+      line-height:1.65;
+    }
+    .statement-textarea:focus{outline:3px solid #bfdbfe;border-color:var(--primary)}
+    .statement-meta{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:13px;color:var(--muted)}
+    .statement-meta .invalid{color:#b91c1c;font-weight:700}
+    @media(max-width:600px){
+      .statement-textarea{min-height:220px}
+      .statement-meta{flex-direction:column;gap:4px}
+    }
+
+
+    /* Learning Difficulty, Disability or Health Condition */
+    .condition-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px 24px;
+      margin-top:18px;
+    }
+    .condition-option{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      min-height:42px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:8px;
+      background:#fff;
+      color:#475569;
+      font-size:14px;
+      line-height:1.45;
+      cursor:pointer;
+    }
+    .condition-option input{
+      width:18px;
+      height:18px;
+      margin:1px 0 0;
+      flex:0 0 auto;
+      accent-color:var(--primary);
+    }
+    .condition-option:has(input:checked){
+      border-color:#93c5fd;
+      background:var(--primary-light);
+    }
+    @media(max-width:600px){
+      .condition-grid{grid-template-columns:1fr;gap:10px}
+    }
+
+
+
+    
+
+    /* Application Preview */
+    .preview-sections{display:grid;gap:12px;margin-top:20px}
+    .preview-section{border:1px solid var(--border);border-radius:9px;background:#fff;overflow:hidden}
+    .preview-toggle{
+      width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:16px 18px;border:0;background:#f8fafc;color:var(--text);font:inherit;
+      font-size:16px;font-weight:700;text-align:left;cursor:pointer;
+    }
+    .preview-toggle:hover{background:#f1f5f9}
+    .preview-toggle:focus{outline:3px solid #bfdbfe;outline-offset:-3px}
+    .preview-chevron{font-size:18px;transition:transform .2s ease}
+    .preview-toggle[aria-expanded="true"] .preview-chevron{transform:rotate(180deg)}
+    .preview-content{padding:18px}
+    .preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px}
+    .preview-item{min-width:0}
+    .preview-label{display:block;margin-bottom:4px;color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+    .preview-value{color:var(--text);font-size:14px;line-height:1.55;overflow-wrap:anywhere;white-space:pre-wrap}
+    .preview-empty{color:var(--muted);font-style:italic}
+    .preview-table{width:100%;border-collapse:collapse}
+    .preview-table th,.preview-table td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;font-size:13px}
+    .preview-signature{display:block;max-width:280px;max-height:160px;border:1px solid var(--border);border-radius:6px;background:#fff}
+    @media(max-width:700px){
+      .preview-grid{grid-template-columns:1fr}
+      .preview-content{padding:14px}
+      .preview-table-wrap{overflow-x:auto}
+    }
+
+
+    .bgError{
+        color: #721c24; !important;
+        background-color: #f8d7da !important;
+        border: 1px solid #f5c6cb;
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        font-weight: bold !important;
+    }
+
+    .bgError ul li{
+        font-weight: 100 !important;
+    }
+
+    .error{
+        display: none !important;
+    }
+
+    .pad20{
+        padding-top: 20px !important;
+    }
+
+    .radiofield input{
+        float: left !important
+    }
+    
+    .radiofield label{
+        font-weight: 100 !important
+    }
+
+    .radiofield td{
+        padding-top: 10px !important;
+    }
+
+</style>
+
+
+<script>
+    function escapePreview(value) {
+        return String(value ?? "").replace(/[&<>"']/g, c => ({
+            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+        })[c]);
+    }
+
+
+
+    function renderPreview() {
+        const host = document.getElementById("application-preview");
+        console.log(host)
+        host.querySelectorAll(".preview-toggle").forEach(button => {
+            button.addEventListener("click", () => {
+                const panel = document.getElementById(button.getAttribute("aria-controls"));
+                const expanded = button.getAttribute("aria-expanded") === "true";
+                button.setAttribute("aria-expanded", String(!expanded));
+                panel.hidden = expanded;
+            });
+        });
+
+        
+    }
+    window.onload = function () {
+        renderPreview();
+    };
+    
+</script>
+
+
+    <div class="step-content" id="step-content">
+        <div>
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="We found some errors in the information you provided. Please fix these errors:" CssClass="bgError" ForeColor="" />
+        </div>
+        <h1>Review Your Data</h1>
+        <p class="intro">Please review your answers to the questions asked.</p>
+        <section class="form-section">
+
+            <div id="application-preview" class="preview-sections">
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="true" aria-controls="preview-panel-0">
+              <span>Personal Details</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-0">
+
+                <section class="form-section" aria-labelledby="personal-heading">
+                    <h2 id="personal-heading">Your Personal details</h2>
+                    <div class="form-grid"> 
+                        
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Title</span><div class="preview-value" id="PreviewTitle" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Legal first name:</span><div class="preview-value" id="PreviewLegalFirstName" runat="server">-</div></div>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Legal last name:</span><div class="preview-value" id="PreviewLegalLastName" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Known as first name:</span><div class="preview-value" id="PreviewKnownAsFirstName" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Known as last name:</span><div class="preview-value" id="PreviewKnownAsLastName" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Date of birth:</span><div class="preview-value" id="PreviewDateOfBirth" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Biological sex:</span><div class="preview-value" id="PreviewBiologicalSex" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Preferred pronouns:</span><div class="preview-value" id="PreviewPreferredPronoun" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Ethnicity:</span><div class="preview-value" id="PreviewEthnicity" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <div class="preview-grid">
+                                 <div class="preview-item"><span class="preview-label">Primary language:</span><div class="preview-value" id="PreviewPrimaryLanguage" runat="server">-</div></div>
+                             </div>
+                         </div>
+                       
+                        
+                    </div>
+                </section>
+                <section class="form-section" aria-labelledby="education-heading">
+                    <h2 id="education-heading">Your Education</h2>
+                    <div class="form-grid">
+                        
+                         <div class="form-group full-width">
+                             <div class="preview-grid full-width">
+                                 <div class="preview-item full-width"><span class="preview-label">Previous school:</span><div class="preview-value" id="PreviewPreviousSchool" runat="server">-</div></div>
+                             </div>
+                         </div>
+                         <div class="form-group full-width">
+                             <div class="preview-grid full-width">
+                                 <div class="preview-item full-width"><span class="preview-label">School name and town provided:</span><div class="preview-value" id="OtherSchoolNameProvided" runat="server">-</div></div>
+                             </div>
+                         </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-1">
+              <span>Contact Details</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-1" hidden>
+
+                <section class="form-section">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">UK Mobile telephone:</span><div class="preview-value" id="PreviewUKMobile" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Home landline telephone:</span><div class="preview-value" id="PreviewHomeLineTel" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group" runat="server" visible="false" id="OverseasGroupDiv">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Overseas Mobile number:</span><div class="preview-value" id="PreviewOverseasMobile" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-grid pad20">
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Your Email Address:</span><div class="preview-value" id="PreviewYourEmailAddress" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                            
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Which country do you live in:</span><div class="preview-value" id="PreviewCountryYouLiveIn" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section" id="UKAddressSection" runat="server" visible="true">
+                    <h2>Your UK Address</h2>
+                    <div class="form-grid">
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Post Code:</span><div class="preview-value" id="PreviewPostCode" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-grid pad20">
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">House number/name and street:</span><div class="preview-value" id="PreviewAddressLine1" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Address line 2:</span><div class="preview-value" id="PreviewAddressLine2" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Address line 3:</span><div class="preview-value" id="PreviewAddressLine3" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">County:</span><div class="preview-value" id="PreviewAddressLine4" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section" id="PreviousAddressSection" runat="server" visible="true">
+                    <h2>Your Previous UK Address</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Previous Postcode:</span><div class="preview-value" id="PreviewPreviousPostcode" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-grid pad20">
+                        <div class="form-group">
+                                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">House number/name and street:</span><div class="preview-value" id="PreviewPreviousHouseNumber" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Address line 2:</span><div class="preview-value" id="PreviewPreviousAddressLine2" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Town/City:</span><div class="preview-value" id="PreviewPreviousAddressLine3" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">County:</span><div class="preview-value" id="PreviewPreviousAddressLine4" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-2">
+              <span>Parent/Carer Contact Details</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-2" hidden>
+                <section class="form-section">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Parent first name:</span><div class="preview-value" id="PreviewParentFirstName" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Parent last name:</span><div class="preview-value" id="PreviewParentLastName" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group" runat="server" visible="true" id="Div3">
+                            <div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">This parent lives in same address with me?</span><div class="preview-value" id="PreviewParentLivesWithMe" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group" runat="server" visible="true" id="Div17">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Relationship:</span><div class="preview-value" id="PreviewParentRelationship" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-grid pad20">
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Parent/Carer mobile telephone:</span><div class="preview-value" id="PreviewParentMobileTel" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Parent/Carer home landline telephone:</span><div class="preview-value" id="PreviewParentPhone" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section" id="Section1" runat="server" visible="true">
+                    <h2>Your Parent/Carer's Address</h2>
+                    <div class="form-grid">
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Post Code:</span><div class="preview-value" id="PreviewParentPostCode" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-grid pad20">
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">House number/name and street:</span><div class="preview-value" id="PreviewParentAddress1" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                      
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Address line 2:</span><div class="preview-value" id="PreviewParentAddress2" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Address line 3:</span><div class="preview-value" id="PreviewParentAddress3" runat="server">-</div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">                          
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">County:</span><div class="preview-value" id="PreviewParentAddress4" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-3">
+              <span>Residency Status</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-3" hidden>
+
+                <section class="form-section">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Are you currently living in the UK?</span><div class="preview-value" id="PreviewCurrentlyLivingInUK" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid pad20" runat="server"  id="livingInUKShow" visible="false">
+                        <div class="form-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Do you have a UK Passport?</span><div class="preview-value" id="PreviewDoYouHaveAUkPassport" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="birth-country-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Country of birth:</span><div class="preview-value" id="PreviewCountryOfBirth" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="alwaysLivedInUKDiv" runat="server">                     
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Have you always lived in the UK?</span><div class="preview-value" id="PreviewHaveYouAlwaysLivedInUK" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="ukEntryDateDiv" runat="server" visible="false">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">What date did you enter the UK?</span><div class="preview-value" id="PreviewDateOfEntryUK" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" runat="server" visible="false" id="LivedInTheUKLast3YrsDiv">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Have you lived in the UK for the last 3 years?</span><div class="preview-value" id="PreviewLivedInUKForLast3Years" runat="server">-</div></div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </section>
+
+                <section class="form-section" runat="server" id="visaImmigrationDetails" visible="false">
+                    <h2>Visa and Immigration Details</h2>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Do you have a Visa?</span><div class="preview-value" id="PreviewDoYouHaveAVisa" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-grid pad20" id="visaDetailsDiv" runat="server" visible="false">
+                        <div class="form-group" id="visa-type-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Visa Type:</span><div class="preview-value" id="PreviewVisaType" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="visa-number-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Visa number:</span><div class="preview-value" id="PreviewVisaNumber" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="visa-start-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Visa start date:</span><div class="preview-value" id="PreviewVisaStartDate" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="visa-end-group">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Visa end date:</span><div class="preview-value" id="PreviewVisaEndDate" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Do you have an eVisa share code?</span><div class="preview-value" id="PreviewHaveAShareCode" runat="server">-</div></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="shareCodeDiv" runat="server">
+                            <div class="preview-grid">
+                                <div class="preview-item"><span class="preview-label">Share code:</span><div class="preview-value" id="PreviewShareCode" runat="server">-</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="preview-section" id="PreviewQualificationsDiv" runat="server" visible="true">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-4">
+              <span>Your Qualifications</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-4" hidden>
+				<section class="form-section" runat="server" id="PersonalStatement">
+                    <h2>Your personal statement</h2>
+					<p id="PreviewPersonalStatement"></p>
+                </section>  
+		  	</div>
+          </div>
+          <div class="preview-section" id="PersonalStatementDiv" runat="server" visible="true">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-5">
+              <span>Personal Statement</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-5" hidden>
+				<section class="form-section" runat="server">
+                    <h2>Your personal statement</h2>
+					<p id="PreviewPersonalStatement"></p>
+                </section>
+			  </div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-6">
+              <span>Learning Difficulty &amp; Diabetes</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-6" hidden>
+				<section class="form-section">
+
+					<div class="contact-grid">
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Do you have a learning difficulty, disability or health condition?</span><div class="preview-value" id="PreviewHaveLDD" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Did you receive additional support from your previous school?</span><div class="preview-value" id="PreviewReceiveAdditionalSupport" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Do you have an Education Health Care Plan?</span><div class="preview-value" id="PreviewHaveECP" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Can we request data regarding your support needs from your school?</span><div class="preview-value" id="PreviewRequestSupportNeedsFromSchool" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">In the event of an emergency, would you require assistance to evacuate the building?</span><div class="preview-value" id="PreviewEmergencyEvacuateBuilding" runat="server">-</div></div>
+                            </div>
+						</div>
+					</div>
+				</section>
+
+				<section class="form-section">
+					<h2>Your selected learning difficulty, disability or health condition(s)</h2>
+
+					
+
+					<div class="full-width" ID="PreviewOtherLDDDiv" runat="server" role="group" aria-label="Learning difficulties, disabilities or health conditions">
+
+					</div>
+
+					<div class="contact-grid" style="margin-top:24px;" id="disfields" runat="server" visible="false"  AutoPostBack="True">
+						<div class="preview-grid full-width">
+							<div class="preview-item full-width"><span class="preview-label full-width">What would you describe as your main learning difficulty/disability?</span><div class="preview-value" id="PreviewDisabilityCategory" runat="server">-</div></div>
+						</div>
+					</div>
+				</section>
+		  	</div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-7">
+              <span>Additional Details</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-7" hidden>
+				<section class="form-section">
+
+					<div class="contact-grid full-width">
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Are you a child in care?</span>
+									<div class="preview-value" id="PreviewChildInCare" runat="server">-</div>
+								</div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Do you have caring responsibilities for a member of your family?</span><div class="preview-value" id="PreviewCaringResponsibilities" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Are you a care leaver (have you recently left being in care)?</span><div class="preview-value" id="PreviewCareLeaver" runat="server">-</div></div>
+                            </div>
+						</div>
+
+						<div class="form-group full-width">
+							<div class="preview-grid full-width">
+                                <div class="preview-item full-width"><span class="preview-label">Do you have Social care involvement?</span><div class="preview-value" id="PreviewSocialCareInvolvement" runat="server">-</div></div>
+                            </div>
+						</div>
+					</div>
+				</section>  
+		  	</div>
+          </div>
+          <div class="preview-section">
+            <button class="preview-toggle" type="button" aria-expanded="false" aria-controls="preview-panel-8">
+              <span>Previous Convictions</span><span class="preview-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="preview-content" id="preview-panel-8" hidden>
+			  	<section class="form-section">
+
+
+					<div class="contact-grid">
+						<div class="form-group full-width">
+							<div class="preview-grid">
+                                <div class="preview-item full-width"><span class="preview-label">Do you have any unspent criminal convictions, outstanding court proceedings, or are you on any offenders register?</span><div class="preview-value" id="PreviewPreviousCriminalConviction" runat="server">-</div></div>
+                            </div>
+						</div>
+					</div>
+				</section>
+		  	</div>
+          </div>
+        </div>
+        </section>
+    </div>
+
+
+<div class="card-footer">
+    <cc1:CCCButton CssClass="btn btn-primary" ID="btnBack" runat="server" Text="← Back" LinkResource="studentdeclaration_aspx" />
+    <cc1:CCCButton CssClass="btn btn-primary" ID="btnContinue" runat="server" Text="Next →" CausesValidation="True" /> <!---->
+</div>

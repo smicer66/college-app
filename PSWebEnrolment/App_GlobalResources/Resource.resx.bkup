@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="basketsmall" xml:space="preserve">
+    <value>~/_images/basketsmall.png</value>
+  </data>
+  <data name="btncontinue" xml:space="preserve">
+    <value>~/_images/btncontinue.png</value>
+  </data>
+  <data name="btnsearch" xml:space="preserve">
+    <value>~/_images/btnsearch.png</value>
+  </data>
+  <data name="btnsubmit" xml:space="preserve">
+    <value>~/_images/btnsubmit.png</value>
+  </data>
+  <data name="icon_applynow" xml:space="preserve">
+    <value>~/_images/icon_applynow.png</value>
+  </data>
+  <data name="icon_enquirenow" xml:space="preserve">
+    <value>~/_images/icon_enquirenow.png</value>
+  </data>
+  <data name="icon_enrolnow" xml:space="preserve">
+    <value>~/_images/icon_enrolnow.png</value>
+  </data>
+  <data name="icon_interview" xml:space="preserve">
+    <value>~/_images/icon_interview.png</value>
+  </data>
+  <data name="icon_noofferings" xml:space="preserve">
+    <value>~/_images/icon_noofferings.png</value>
+  </data>
+  <data name="icon_unavailable" xml:space="preserve">
+    <value>~/_images/icon_unavailable.png</value>
+  </data>
+  <data name="checkout_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout.ascx</value>
+  </data>
+  <data name="coursedisplay_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/coursedisplay.ascx</value>
+  </data>
+  <data name="courseunavailable_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/courseunavailable.ascx</value>
+  </data>
+  <data name="onlineenrolmentnotavailable_a_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/onlineenrolmentnotavailable_age.ascx</value>
+  </data>
+  <data name="thankyou_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/thankyou.ascx</value>
+  </data>
+  <data name="thankyou_enquiry_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/thankyou_enquiry.ascx</value>
+  </data>
+  <data name="checkout_applications_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_applications.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_apponly_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_dataprotection_apponly.ascx</value>
+  </data>
+  <data name="checkout_enquiries_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enquiries.ascx</value>
+  </data>
+  <data name="checkout_enrolments_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx</value>
+  </data>
+  <data name="checkout_makepayment_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_makepayment.ascx</value>
+  </data>
+  <data name="courseapply_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/courseapply.ascx</value>
+  </data>
+	<data name="applicationguidance_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/applicationguidance.ascx</value>
+  </data>
+	<data name="personaldetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/personaldetails.ascx</value>
+  </data>
+	<data name="contactdetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/contactdetails.ascx</value>
+  </data>
+	<data name="parentcarercontactdetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/parentcarercontactdetails.ascx</value>
+  </data>
+	<data name="residencystatus_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/residencystatus.ascx</value>
+  </data>
+	<data name="yourqualifications_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/yourqualifications.ascx</value>
+  </data>
+	<data name="personalstatement_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/personalstatement.ascx</value>
+  </data>
+	<data name="learningdifficultyanddisability_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/learningdifficultyanddisability.ascx</value>
+  </data>
+	<data name="additionaldetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/additionaldetails.ascx</value>
+  </data>
+	<data name="previousconvictions_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/previousconvictions.ascx</value>
+  </data>
+	<data name="privacynotices_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/privacynotices.ascx</value>
+  </data>
+	<data name="studentdeclaration_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/studentdeclaration.ascx</value>
+  </data>
+	<data name="thankyou_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/thankyou.ascx</value>
+  </data>
+	<data name="preview_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/preview.ascx</value>
+  </data>
+  <data name="courseenrol_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/courseenrol.ascx</value>
+  </data>
+  <data name="courseenquire_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/courseenquire.ascx</value>
+  </data>
+  <data name="search_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/search.ascx</value>
+  </data>
+  <data name="address_0_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_0.ascx</value>
+  </data>
+  <data name="address_1_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_1.ascx</value>
+  </data>
+  <data name="address_2_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_2.ascx</value>
+  </data>
+  <data name="address_3_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_3.ascx</value>
+  </data>
+  <data name="address_4_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_4.ascx</value>
+  </data>
+  <data name="btnBack" xml:space="preserve">
+    <value>~/_images/btnback.png</value>
+  </data>
+  <data name="checkout_dataprotection_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx</value>
+  </data>
+  <data name="checkout_enrolments3_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enrolments3.ascx</value>
+  </data>
+  <data name="checkout_priorattainment_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_prior_attainment.ascx</value>
+  </data>
+  <data name="requiredfieldicon" xml:space="preserve">
+    <value>~/_images/requiredfieldicon.png</value>
+  </data>
+  <data name="icon_reservelist" xml:space="preserve">
+    <value>~/_images/icon_reservelist.png</value>
+  </data>
+  <data name="thankyou_application_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/thankyou_application.ascx</value>
+  </data>
+  <data name="gap" xml:space="preserve">
+    <value>~/_images/gap.gif</value>
+  </data>
+  <data name="onlineenrolmentnotavailable_b_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/onlineenrolmentnotavailable_timeout.ascx</value>
+  </data>
+  <data name="checkout_quals_on_entry_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx</value>
+  </data>
+  <data name="address_capscan_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_capscan.ascx</value>
+  </data>
+  <data name="courseenrolapply_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/courseenrolapply.ascx</value>
+  </data>
+  <data name="onlineenrolmentnotavailable_e_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/onlineenrolmentnotavailable_euro.ascx</value>
+  </data>
+  <data name="QASFinal" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx</value>
+  </data>
+  <data name="address_AFDEvolution_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_AFDEvolution.ascx</value>
+  </data>
+  <data name="checkout_applications2_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_applications2.ascx</value>
+  </data>
+  <data name="checkout_school_employer_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_school_employer.ascx</value>
+  </data>
+  <data name="checkout_parentguardian_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx</value>
+  </data>
+  <data name="thankyou_failpayment_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/thankyou_failpayment.ascx</value>
+  </data>
+  <data name="PayPalButton" xml:space="preserve">
+    <value>~/_images/paypal.gif</value>
+  </data>
+  <data name="ApplicationCalendarCSS" xml:space="preserve">
+    <value>http://code.jquery.com/ui/1.10.3/themes/south-street/jquery-ui.css</value>
+  </data>
+  <data name="EnquiryCalendarCSS" xml:space="preserve">
+    <value>http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css</value>
+  </data>
+  <data name="EnrolmentCalendarCSS" xml:space="preserve">
+    <value>http://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css</value>
+  </data>
+  <data name="address_QASProOnDemand_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_QASProOnDemand.ascx</value>
+  </data>
+  <data name="UserAccount" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/account/ccc/UserAccount.ascx</value>
+  </data>
+  <data name="checkout_references_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_references.ascx</value>
+  </data>
+  <data name="checkout_employment" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_employment.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_enquiry" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_dataprotection_enquiry.ascx</value>
+  </data>
+  <data name="checkout_enquiries" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_enquiries.ascx</value>
+  </data>
+  <data name="ConfirmationEmailContents" xml:space="preserve">
+    <value>Thank you for submitting your request. We have received it successfully and will be in touch soon. 
+
+Kind Regards, 
+College Admissions Team</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/account/ccc/AccountCreated.ascx</value>
+  </data>
+  <data name="coursefinder" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/coursefinder.ascx</value>
+  </data>
+  <data name="PendingVerification" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/account/ccc/AccessPending.ascx</value>
+  </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>_images/search/Accounting.png</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>_images/search/Administration.png</value>
+  </data>
+  <data name="ArtDesign" xml:space="preserve">
+    <value>_images/search/ArtDesign.png</value>
+  </data>
+  <data name="Assessing" xml:space="preserve">
+    <value>_images/search/assessing.png</value>
+  </data>
+  <data name="Beauty" xml:space="preserve">
+    <value>_images/search/beauty.png</value>
+  </data>
+  <data name="Business" xml:space="preserve">
+    <value>_images/search/business.png</value>
+  </data>
+  <data name="Childcare" xml:space="preserve">
+    <value>_images/search/childcare.png</value>
+  </data>
+  <data name="Construction" xml:space="preserve">
+    <value>_images/search/construction.png</value>
+  </data>
+  <data name="ElectricalElectronics" xml:space="preserve">
+    <value>_images/search/ElectricalElectronics.png</value>
+  </data>
+  <data name="Engineering" xml:space="preserve">
+    <value>_images/search/engineering.png</value>
+  </data>
+  <data name="EnvironmentalSustainability" xml:space="preserve">
+    <value>_images/search/EnvironmentalSustainability.png</value>
+  </data>
+  <data name="EssentialSkills" xml:space="preserve">
+    <value>_images/search/EssentialSkills.png</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>_images/search/gas.png</value>
+  </data>
+  <data name="Hairdressing" xml:space="preserve">
+    <value>_images/search/Hairdressing.png</value>
+  </data>
+  <data name="HealthSocialCare" xml:space="preserve">
+    <value>_images/search/HealthSocialCare.png</value>
+  </data>
+  <data name="Humanities" xml:space="preserve">
+    <value>_images/search/Humanities.png</value>
+  </data>
+  <data name="InformationTechnology" xml:space="preserve">
+    <value>_images/search/InformationTechnology.png</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>_images/search/Languages.png</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>_images/search/Management.png</value>
+  </data>
+  <data name="MotorVehicle" xml:space="preserve">
+    <value>_images/search/Motor Vehicle.png</value>
+  </data>
+  <data name="PublicServices" xml:space="preserve">
+    <value>_images/search/Public Services.png</value>
+  </data>
+  <data name="RetailWarehousing" xml:space="preserve">
+    <value>_images/search/Retail &amp; Warehousing.png</value>
+  </data>
+  <data name="Safety" xml:space="preserve">
+    <value>_images/search/Safety.png</value>
+  </data>
+  <data name="Science" xml:space="preserve">
+    <value>_images/search/Science.png</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>_images/search/Accounting.png</value>
+  </data>
+  <data name="Teaching" xml:space="preserve">
+    <value>_images/search/Accounting.png</value>
+  </data>
+  <data name="PaymentsCallbackPage" xml:space="preserve">
+    <value>http://localhost:44444/webcontrols/checkout_paymentcallback.aspx</value>
+  </data>
+  <data name="PaymentsCancelPage" xml:space="preserve">
+    <value>http://localhost:44444/webcontrols/checkout_paymentcallback.aspx</value>
+  </data>
+  <data name="CustomEmailContent" xml:space="preserve">
+    <value>~/content/email.html</value>
+  </data>
+  <data name="collegeLogo" xml:space="preserve">
+    <value>~/_images/compass-blue.png</value>
+  </data>
+  <data name="onlineenrolmentnotavailable_c_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/onlineenrolmentnotavailable_details.ascx</value>
+  </data>
+  <data name="PaymentsPingPage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="address_AFD_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_AFD.ascx</value>
+  </data>
+  <data name="address_matchcode360_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_matchcode360.ascx</value>
+  </data>
+  <data name="address_getaddress_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/address_getaddress.ascx</value>
+  </data>
+  <data name="checkout_attachments_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_attachments.ascx</value>
+  </data>
+  <data name="StudentSignature_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/StudentSignature.ascx</value>
+  </data>
+  <data name="checkout_attachments_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_attachments_HE.ascx</value>
+  </data>
+  <data name="checkout_employment_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_employment_HE.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_enrolments2_HE.ascx</value>
+  </data>
+  <data name="checkout_enrolments_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_enrolments_HE.ascx</value>
+  </data>
+  <data name="checkout_parentguardian_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_parent_guardian_HE.ascx</value>
+  </data>
+  <data name="checkout_photo_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_photo_HE.ascx</value>
+  </data>
+  <data name="checkout_quals_on_entry_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_quals_on_entry_HE.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_dataprotection_HE.ascx</value>
+  </data>
+  <data name="checkout_makepayment_HE_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/HE/checkout_makepayment_HE.ascx</value>
+  </data>
+  <data name="thankyou_accceptance_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/accept/thankyou_accept.ascx</value>
+  </data>
+  <data name="checkout_attachments_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/1618/checkout_attachments.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_dataprotection.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_enrolments2.ascx</value>
+  </data>
+  <data name="checkout_enrolments_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_enrolments.ascx</value>
+  </data>
+  <data name="checkout_parentguardian_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_parent_guardian.ascx</value>
+  </data>
+  <data name="checkout_photo_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_photo.ascx</value>
+  </data>
+  <data name="checkout_quals_on_entry_1618_aspx" xml:space="preserve">
+    <value>~/webenrolment_1618.aspx?page=~/NewPages/1618/checkout_quals_on_entry.ascx</value>
+  </data>
+  <data name="checkout_evidence_dataprotection" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/1618/checkout_evidence_dataprotection_new.ascx</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/account/ccc/logout.ascx</value>
+  </data>
+  <data name="checkout_evidence_new" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/1618/checkout_evidence_new.ascx</value>
+  </data>
+  <data name="onlineenrolmentnotavailable_details_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/onlineenrolmentnotavailable_details.ascx</value>
+  </data>
+  <data name="thankyou_dpo_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/dpo/thankyou_dpo.ascx</value>
+  </data>
+  <data name="checkout_attachments_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_attachments_adult.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_dataprotection_adult.ascx</value>
+  </data>
+  <data name="checkout_employment_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_employment_adult.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_enrolments2_adult.ascx</value>
+  </data>
+  <data name="checkout_enrolments_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_enrolments_adult.ascx</value>
+  </data>
+  <data name="checkout_parentguardian_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_parent_guardian_adult.ascx</value>
+  </data>
+  <data name="checkout_photo_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_photo_adult.ascx</value>
+  </data>
+  <data name="checkout_quals_on_entry_adult_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/adult/checkout_quals_on_entry_adult.ascx</value>
+  </data>
+  <data name="checkout_attachments_FC_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/FC/checkout_attachmentsFC.ascx</value>
+  </data>
+  <data name="checkout_dataprotection_fc_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/fc/checkout_dataprotectionFC.ascx</value>
+  </data>
+  <data name="checkout_employment_fc_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/newpages/fc/checkout_employmentFC.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_fc_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/fc/checkout_enrolments2FC.ascx</value>
+  </data>
+  <data name="checkout_enrolments_FC_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/FC/checkout_enrolmentsFC.ascx</value>
+  </data>
+  <data name="checkout_parentguardian_fc_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/fc/checkout_parent_guardianFC.ascx</value>
+  </data>
+  <data name="checkout_photo_FC_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/FC/checkout_photoFC.ascx</value>
+  </data>
+  <data name="CustomEmailSchool" xml:space="preserve">
+    <value>~/content/emailSchool.html</value>
+  </data>
+  <data name="checkout_dataprotection_Apps_aspx" xml:space="preserve">
+    <value>~/webenrolmentApps.aspx?page=~/NewPages/Apps/checkout_dataprotectionApps.ascx</value>
+  </data>
+  <data name="checkout_employment_Apps_aspx" xml:space="preserve">
+    <value>~/webenrolmentApps.aspx?page=~/NewPages/Apps/checkout_employmentApps.ascx</value>
+  </data>
+  <data name="checkout_enrolments2_Apps_aspx" xml:space="preserve">
+    <value>~/webenrolmentApps.aspx?page=~/NewPages/Apps/checkout_enrolments2Apps.ascx</value>
+  </data>
+  <data name="checkout_enrolments_Apps_aspx" xml:space="preserve">
+    <value>~/webenrolmentApps.aspx?page=~/NewPages/Apps/checkout_enrolmentsApps.ascx</value>
+  </data>
+  <data name="checkout_quals_on_entry_Apps_aspx" xml:space="preserve">
+    <value>~/webenrolmentApps.aspx?page=~/NewPages/Apps/checkout_quals_on_entry_Apps.ascx</value>
+  </data>
+  <data name="thankyou_organisation_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/apps/thankyou_accept.ascx</value>
+  </data>
+  <data name="checkout_attachments_photos_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/checkout_attachments_photos.ascx</value>
+  </data>
+  <data name="checkout_fc_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/FC/checkoutFC.ascx</value>
+  </data>
+  <data name="thankyou_response_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/NewPages/1618/thankyou_response.ascx</value>
+  </data>
+</root>

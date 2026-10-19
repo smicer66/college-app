@@ -183,6 +183,48 @@
   <data name="courseapply_aspx" xml:space="preserve">
     <value>~/webenrolment.aspx?page=~/webcontrols/courseapply.ascx</value>
   </data>
+	<data name="applicationguidance_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/applicationguidance.ascx</value>
+  </data>
+	<data name="personaldetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/personaldetails.ascx</value>
+  </data>
+	<data name="contactdetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/contactdetails.ascx</value>
+  </data>
+	<data name="parentcarercontactdetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/parentcarercontactdetails.ascx</value>
+  </data>
+	<data name="residencystatus_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/residencystatus.ascx</value>
+  </data>
+	<data name="yourqualifications_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/yourqualifications.ascx</value>
+  </data>
+	<data name="personalstatement_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/personalstatement.ascx</value>
+  </data>
+	<data name="learningdifficultyanddisability_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/learningdifficultyanddisability.ascx</value>
+  </data>
+	<data name="additionaldetails_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/additionaldetails.ascx</value>
+  </data>
+	<data name="previousconvictions_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/previousconvictions.ascx</value>
+  </data>
+	<data name="privacynotices_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/privacynotices.ascx</value>
+  </data>
+	<data name="studentdeclaration_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/studentdeclaration.ascx</value>
+  </data>
+	<data name="thankyou_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/thankyou.ascx</value>
+  </data>
+	<data name="preview_aspx" xml:space="preserve">
+    <value>~/webenrolment.aspx?page=~/webcontrols/v2.0/preview.ascx</value>
+  </data>
   <data name="courseenrol_aspx" xml:space="preserve">
     <value>~/webenrolment.aspx?page=~/webcontrols/courseenrol.ascx</value>
   </data>

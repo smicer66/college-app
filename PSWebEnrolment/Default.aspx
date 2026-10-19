@@ -7,8 +7,8 @@
 
 <title>Untitled Page</title>
 
-<%--<%  Response.Redirect("~/webenrolment.aspx?page=~/webcontrols/checkout_generic_enquiry.ascx")%>--%>
-<%  Response.Redirect("http://www.cityofbristol.ac.uk/")%>
+<%--<%  Response.Redirect("~/webenrolment.aspx?page=~/webcontrols/checkout_generic_enquiry.ascx")%>http://www.cityofbristol.ac.uk/--%>
+<%--<%  Response.Redirect("https://localhost:44346/webenrolment.aspx?page=~/webcontrols/v2.0/applicationguidance.ascx&OfferingID=179330")--%>
 
 </head>
 

@@ -19,7 +19,7 @@ namespace Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option or rebuild the Visual Studio project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resource {
@@ -75,6 +75,15 @@ namespace Resources {
         internal static string Accounting {
             get {
                 return ResourceManager.GetString("Accounting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/additionaldetails.ascx.
+        /// </summary>
+        internal static string additionaldetails_aspx {
+            get {
+                return ResourceManager.GetString("additionaldetails_aspx", resourceCulture);
             }
         }
         
@@ -192,6 +201,15 @@ namespace Resources {
         internal static string ApplicationCalendarCSS {
             get {
                 return ResourceManager.GetString("ApplicationCalendarCSS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/applicationguidance.ascx.
+        /// </summary>
+        internal static string applicationguidance_aspx {
+            get {
+                return ResourceManager.GetString("applicationguidance_aspx", resourceCulture);
             }
         }
         
@@ -847,6 +865,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/contactdetails.ascx.
+        /// </summary>
+        internal static string contactdetails_aspx {
+            get {
+                return ResourceManager.GetString("contactdetails_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/courseapply.ascx.
         /// </summary>
         internal static string courseapply_aspx {
@@ -1108,6 +1135,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/learningdifficultyanddisability.ascx.
+        /// </summary>
+        internal static string learningdifficultyanddisability_aspx {
+            get {
+                return ResourceManager.GetString("learningdifficultyanddisability_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/account/ccc/logout.ascx.
         /// </summary>
         internal static string logout {
@@ -1180,6 +1216,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/parentcarercontactdetails.ascx.
+        /// </summary>
+        internal static string parentcarercontactdetails_aspx {
+            get {
+                return ResourceManager.GetString("parentcarercontactdetails_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://localhost:44444/webcontrols/checkout_paymentcallback.aspx.
         /// </summary>
         internal static string PaymentsCallbackPage {
@@ -1225,6 +1270,51 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/personaldetails.ascx.
+        /// </summary>
+        internal static string personaldetails_aspx {
+            get {
+                return ResourceManager.GetString("personaldetails_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/personalstatement.ascx.
+        /// </summary>
+        internal static string personalstatement_aspx {
+            get {
+                return ResourceManager.GetString("personalstatement_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/preview.ascx.
+        /// </summary>
+        internal static string preview_aspx {
+            get {
+                return ResourceManager.GetString("preview_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/previousconvictions.ascx.
+        /// </summary>
+        internal static string previousconvictions_aspx {
+            get {
+                return ResourceManager.GetString("previousconvictions_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/privacynotices.ascx.
+        /// </summary>
+        internal static string privacynotices_aspx {
+            get {
+                return ResourceManager.GetString("privacynotices_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _images/search/Public Services.png.
         /// </summary>
         internal static string PublicServices {
@@ -1248,6 +1338,15 @@ namespace Resources {
         internal static string requiredfieldicon {
             get {
                 return ResourceManager.GetString("requiredfieldicon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/residencystatus.ascx.
+        /// </summary>
+        internal static string residencystatus_aspx {
+            get {
+                return ResourceManager.GetString("residencystatus_aspx", resourceCulture);
             }
         }
         
@@ -1297,6 +1396,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/studentdeclaration.ascx.
+        /// </summary>
+        internal static string studentdeclaration_aspx {
+            get {
+                return ResourceManager.GetString("studentdeclaration_aspx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/StudentSignature.ascx.
         /// </summary>
         internal static string StudentSignature_aspx {
@@ -1333,7 +1441,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/thankyou.ascx.
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/thankyou.ascx.
         /// </summary>
         internal static string thankyou_aspx {
             get {
@@ -1392,6 +1500,15 @@ namespace Resources {
         internal static string UserAccount {
             get {
                 return ResourceManager.GetString("UserAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/webenrolment.aspx?page=~/webcontrols/v2.0/yourqualifications.ascx.
+        /// </summary>
+        internal static string yourqualifications_aspx {
+            get {
+                return ResourceManager.GetString("yourqualifications_aspx", resourceCulture);
             }
         }
     }

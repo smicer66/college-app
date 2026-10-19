@@ -1,0 +1,206 @@
+.selected-courses {
+  margin-top: 30px;
+}
+
+.selected-courses h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+/* Container */
+.course-grid {
+  display: grid;
+  gap: 10px;
+}
+
+/* Each course = exactly 4 columns */
+.course-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    90px
+    auto
+    auto;
+
+  gap: 12px;
+  align-items: center;
+
+  padding: 16px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+/* COLUMN 1 */
+
+.course-description {
+  min-width: 0;
+}
+
+.course-description strong {
+  display: block;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #172b4d;
+}
+
+.course-description span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* COLUMN 2 */
+
+.choice-column {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.choice-column label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Small because only 1–9 is required */
+.choice-input {
+  width: 42px;
+  height: 38px;
+
+  padding: 4px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.choice-input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+
+/* COLUMNS 3 & 4 */
+
+.btn {
+  border: 0;
+  border-radius: 6px;
+
+  padding: 10px 14px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.btn-update {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-update:hover {
+  background: #1d4ed8;
+}
+
+.btn-remove {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-remove:hover {
+  background: #fecaca;
+}
+
+
+/* Status message */
+
+.course-message {
+  min-height: 20px;
+  margin-top: 10px;
+
+  font-size: 13px;
+  color: #15803d;
+}
+
+
+
+
+
+.guidance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  width: 100%;
+  margin: 24px 0;
+  padding: 0px;
+
+  background: #ffffff;
+  border: 0px solid #dbe3ed;
+  border-radius: 10px;
+
+  color: #172b4d;
+}
+
+.guidance-grid p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.guidance-grid h3 {
+  margin: 8px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.guidance-grid ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.guidance-grid li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #475569;
+}
+
+.guidance-grid li:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .guidance-grid {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .guidance-grid p {
+    font-size: 14px;
+  }
+
+  .guidance-grid li {
+    font-size: 13px;
+  }
+}

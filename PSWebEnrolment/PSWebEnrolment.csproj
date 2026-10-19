@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PSWebEnrolment</RootNamespace>
     <AssemblyName>PSWebEnrolment</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44346</IISExpressSSLPort>
@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,144 +40,143 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\AWSSDK.Core.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\AWSSDK.S3.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core">
+      <HintPath>..\..\..\..\1\dlls\Azure.Core.dll</HintPath>
     </Reference>
     <Reference Include="BotDetect, Version=4.2.0.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\BotDetect.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\BotDetect.dll</HintPath>
     </Reference>
     <Reference Include="BotDetect.Web.Mvc, Version=4.2.0.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\BotDetect.Web.Mvc.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\BotDetect.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="CCCCommon, Version=24.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\CCCCommon.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\CCCCommon.dll</HintPath>
     </Reference>
     <Reference Include="CCCWinUI, Version=24.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\CCCWinUI.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\CCCWinUI.dll</HintPath>
     </Reference>
     <Reference Include="Countly, Version=19.8.0.0, Culture=neutral, PublicKeyToken=30fd2b3d8bfe4882, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Countly.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Countly.dll</HintPath>
     </Reference>
     <Reference Include="DocuSign.eSign, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DocuSign.eSign.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\DocuSign.eSign.dll</HintPath>
     </Reference>
     <Reference Include="DotNetZip, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b1d6f24084d852f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DotNetZip.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Elmah.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Elmah.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\HtmlRenderer.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\HtmlRenderer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\HtmlRenderer.PdfSharp.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\HtmlRenderer.PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.0.21, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Ionic.Zip.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Data.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Data.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Data.v4.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.CalendarCombo.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Windows.CalendarCombo.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Windows.CalendarCombo.v4.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Windows.Common.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Windows.Common.v4.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Windows.GridEX.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Windows.GridEX.v4.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Schedule.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Windows.Schedule.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Windows.Schedule.v4.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Janus.Windows.UI.v4.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Janus.Windows.UI.v4.dll</HintPath>
     </Reference>
     <Reference Include="jSignature.Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\jSignature.Tools.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\jSignature.Tools.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\PdfSharp.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="ProSolutionBusiness, Version=22.3.0.47, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\ProSolutionBusiness.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\ProSolutionBusiness.dll</HintPath>
     </Reference>
     <Reference Include="ProSolutionBusiness.XmlSerializers">
-      <HintPath>..\..\bin\ProSolutionBusiness.XmlSerializers.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\ProSolutionBusiness.XmlSerializers.dll</HintPath>
     </Reference>
     <Reference Include="PSWebEnrolmentKit, Version=22.5.0.8, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\PSWebEnrolmentKit.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\PSWebEnrolmentKit.dll</HintPath>
     </Reference>
     <Reference Include="QAS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\QAS.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\QAS.dll</HintPath>
     </Reference>
     <Reference Include="QASProOnDemand, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\QASProOnDemand.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\QASProOnDemand.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=106.3.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\RestSharp.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="Svg, Version=2.2.1.39233, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Svg.dll</HintPath>
+      <HintPath>..\..\..\..\1\dlls\Svg.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="account\aspnetdb\Login.aspx" />
@@ -273,7 +275,9 @@
     <Content Include="customicons\flaticon.html" />
     <Content Include="customicons\Flaticon.svg" />
     <Content Include="Default.aspx" />
-    <Content Include="Default.aspx.vb" />
+    <Content Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="fonts\AvenirLTStd-Book_gdi.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphiconshalflings-regular.svg" />
@@ -312,13 +316,18 @@
     <Content Include="js\ondemand\template\TemplateFlatRefine.htm" />
     <Content Include="js\ondemand\template\TemplateFlatSearch.htm" />
     <Content Include="js\respond.min.js" />
+    <Content Include="js\v1\master.js" />
     <Content Include="NewPages\1618\checkout_attachments.ascx" />
-    <Content Include="NewPages\1618\checkout_attachments.ascx.vb" />
+    <Content Include="NewPages\1618\checkout_attachments.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="NewPages\1618\checkout_dataprotection.ascx" />
     <Content Include="NewPages\1618\checkout_dataprotection.ascx.vb" />
     <Content Include="NewPages\1618\checkout_employment.ascx" />
     <Content Include="NewPages\1618\checkout_enrolments.ascx" />
-    <Content Include="NewPages\1618\checkout_enrolments.ascx.vb" />
+    <Content Include="NewPages\1618\checkout_enrolments.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="NewPages\1618\checkout_enrolments2.ascx" />
     <Content Include="NewPages\1618\checkout_enrolments2.vb" />
     <Content Include="NewPages\1618\checkout_evidence_dataprotection_new.ascx" />
@@ -358,7 +367,9 @@
     <Content Include="NewPages\adult\checkout_enrolments2_adult.ascx" />
     <Content Include="NewPages\adult\checkout_enrolments2_adult.vb" />
     <Content Include="NewPages\adult\checkout_enrolments_adult.ascx" />
-    <Content Include="NewPages\adult\checkout_enrolments_adult.ascx.vb" />
+    <Content Include="NewPages\adult\checkout_enrolments_adult.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="NewPages\adult\checkout_makepayment_adult.ascx" />
     <Content Include="NewPages\adult\checkout_makepayment_adult.ascx.vb" />
     <Content Include="NewPages\adult\checkout_parent_guardian_adult.ascx" />
@@ -397,7 +408,9 @@
     <Content Include="NewPages\dpo\thankyou_dpo.ascx" />
     <Content Include="NewPages\dpo\thankyou_dpo.ascx.vb" />
     <Content Include="NewPages\FC\checkoutFC.ascx" />
-    <Content Include="NewPages\FC\checkoutFC.ascx.vb" />
+    <Content Include="NewPages\FC\checkoutFC.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="NewPages\FC\checkout_attachmentsFC.ascx" />
     <Content Include="NewPages\FC\checkout_attachmentsFC.ascx.vb" />
     <Content Include="NewPages\FC\checkout_dataprotectionFC.ascx" />
@@ -506,7 +519,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
-    <Content Include="UserControlMasterPage.master.vb" />
+    <Content Include="UserControlMasterPage.master.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="UserControlMasterPageApps.master.vb" />
     <Content Include="UserControlMasterPage_1618.master.vb" />
     <Content Include="UserControlMasterPage_old.master.vb" />
@@ -516,13 +531,17 @@
     </Content>
     <Content Include="webcontrols\address_0.js" />
     <Content Include="webcontrols\address_1.ascx" />
-    <Content Include="webcontrols\address_1.ascx.vb" />
+    <Content Include="webcontrols\address_1.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\address_2.ascx" />
     <Content Include="webcontrols\address_2.ascx.vb" />
     <Content Include="webcontrols\address_3.ascx" />
     <Content Include="webcontrols\address_3.ascx.vb" />
     <Content Include="webcontrols\address_4.ascx" />
-    <Content Include="webcontrols\address_4.ascx.vb" />
+    <Content Include="webcontrols\address_4.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\address_AFD.ascx" />
     <Content Include="webcontrols\address_AFD.ascx.vb" />
     <Content Include="webcontrols\address_AFDEvolution.ascx" />
@@ -572,7 +591,9 @@
     <Content Include="webcontrols\checkout_dataprotection.ascx" />
     <Content Include="webcontrols\checkout_dataprotection.ascx.vb" />
     <Content Include="webcontrols\checkout_dataprotection_apponly.ascx" />
-    <Content Include="webcontrols\checkout_dataprotection_apponly.ascx.vb" />
+    <Content Include="webcontrols\checkout_dataprotection_apponly.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\checkout_dataprotection_enquiry.ascx" />
     <Content Include="webcontrols\checkout_dataprotection_enquiry.ascx.vb" />
     <Content Include="webcontrols\checkout_employment.ascx" />
@@ -593,7 +614,9 @@
     <Content Include="webcontrols\checkout_makepayment.ascx" />
     <Content Include="webcontrols\checkout_makepayment.ascx.vb" />
     <Content Include="webcontrols\checkout_parent_guardian.ascx" />
-    <Content Include="webcontrols\checkout_parent_guardian.ascx.vb" />
+    <Content Include="webcontrols\checkout_parent_guardian.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\checkout_paymentcallback.aspx" />
     <Content Include="webcontrols\checkout_paymentcallback.aspx.vb" />
     <Content Include="webcontrols\checkout_prior_attainment.ascx" />
@@ -613,7 +636,9 @@
     <Content Include="webcontrols\contact.ascx.vb" />
     <Content Include="webcontrols\countries.all.inc" />
     <Content Include="webcontrols\courseapply.ascx" />
-    <Content Include="webcontrols\courseapply.ascx.vb" />
+    <Content Include="webcontrols\courseapply.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webcontrols\coursedisplay.ascx" />
     <Content Include="webcontrols\coursedisplay.ascx.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -669,6 +694,58 @@
     <Content Include="webcontrols\thankyou_enquiry.ascx.vb" />
     <Content Include="webcontrols\thankyou_failpayment.ascx" />
     <Content Include="webcontrols\thankyou_failpayment.ascx.vb" />
+    <Content Include="webcontrols\v2.0\applicationguidance.ascx" />
+    <Content Include="webcontrols\v2.0\applicationguidance.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\contactdetails.ascx" />
+    <Content Include="webcontrols\v2.0\contactdetails.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\courseapply.ascx" />
+    <Content Include="webcontrols\v2.0\courseapply.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\parentcarercontactdetails.ascx" />
+    <Content Include="webcontrols\v2.0\parentcarercontactdetails.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\learningdifficultyanddisability.ascx" />
+    <Content Include="webcontrols\v2.0\learningdifficultyanddisability.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\additionaldetails.ascx" />
+    <Content Include="webcontrols\v2.0\privacynotices.ascx" />
+    <Content Include="webcontrols\v2.0\studentdeclaration.ascx" />
+    <Content Include="webcontrols\v2.0\studentdeclaration.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\privacynotices.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\previousconvictions.ascx" />
+    <Content Include="webcontrols\v2.0\personalstatement.ascx" />
+    <Content Include="webcontrols\v2.0\additionaldetails.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\previousconvictions.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\personalstatement.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\yourqualifications.ascx" />
+    <Content Include="webcontrols\v2.0\yourqualifications.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\residencystatus.ascx" />
+    <Content Include="webcontrols\v2.0\personaldetails.ascx" />
+    <Content Include="webcontrols\v2.0\residencystatus.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="webcontrols\v2.0\personaldetails.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="webenrolment.aspx" />
     <Content Include="webenrolment.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -703,6 +780,7 @@
     <Content Include="_css\old_jquery-ui.css" />
     <Content Include="_css\old_jquery-ui.min.css" />
     <Content Include="_css\toastr.min.css" />
+    <Content Include="_css\v1\websitecss.css" />
     <Content Include="_images\advanced-logo-header.png" />
     <Content Include="_images\basket.png" />
     <Content Include="_images\basketsmall.png" />
@@ -804,8 +882,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_GlobalResources\Resource.designer.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -813,9 +891,11 @@
   <ItemGroup>
     <Content Include="App_GlobalResources\Resource.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resource.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
